@@ -21,10 +21,16 @@
 [ext_resource type="Script" uid="uid://cgtxv1fnflwfu" path="res://addons/simple_cards/shape/premade_shapes/arc_shape.gd" id="16_k8i5p"]
 [ext_resource type="Script" uid="uid://d2l8uaoel5whd" path="res://addons/simple_cards/containers/pile/card_pile.gd" id="17_b47kv"]
 [ext_resource type="Resource" uid="uid://cckhgs0wjkswd" path="res://Card Data/Gu/Martial Moves/test_card.tres" id="17_x6wr7"]
-[ext_resource type="Texture2D" uid="uid://crd33hf2akbos" path="res://Assets/Screenshot 2026-06-17 162811.png" id="18_vys3o"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="19_ajjgt"]
 [ext_resource type="Texture2D" uid="uid://b5hnow1oi63sd" path="res://Assets/EndTurnButton.png" id="20_5y3d7"]
 [ext_resource type="BitMap" uid="uid://7k554wiexp0c" path="res://Assets/EndTurnButtonBitmap.bmp" id="21_i8h5o"]
+[ext_resource type="Texture2D" uid="uid://bon7f2i5e3exw" path="res://Assets/IMG_2337.png" id="22_g2ija"]
+[ext_resource type="Texture2D" uid="uid://bmw8g5ig86jth" path="res://IMG_2338.png" id="23_skhyk"]
+[ext_resource type="Texture2D" uid="uid://irsf7u6y1sor" path="res://IMG_2339.png" id="25_jlb0g"]
+[ext_resource type="Texture2D" uid="uid://d0f4hmyp4iv34" path="res://IMG_2340.png" id="26_88goi"]
+[ext_resource type="Texture2D" uid="uid://dljnsp5xuxjkp" path="res://IMG_2341.png" id="27_u8awk"]
+[ext_resource type="Texture2D" uid="uid://bychlovjo8mo0" path="res://IMG_2342.png" id="28_k8i5p"]
+[ext_resource type="Texture2D" uid="uid://cfvbal1an5n84" path="res://IMG_2343.png" id="29_b47kv"]
 
 [sub_resource type="Resource" id="Resource_r3r3k"]
 script = ExtResource("14_88goi")
@@ -39,24 +45,9 @@ arc_angle = 30.0
 card_spacing = 170.0
 metadata/_custom_type_script = "uid://cgtxv1fnflwfu"
 
-[sub_resource type="LabelSettings" id="LabelSettings_r3r3k"]
-font = ExtResource("19_ajjgt")
-font_size = 60
-
-[sub_resource type="LabelSettings" id="LabelSettings_blcw0"]
-resource_local_to_scene = true
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font = ExtResource("19_ajjgt")
 font_size = 50
-
-[sub_resource type="LabelSettings" id="LabelSettings_sq7yr"]
-resource_local_to_scene = true
-font = ExtResource("19_ajjgt")
-font_size = 40
-
-[sub_resource type="LabelSettings" id="LabelSettings_50g4q"]
-resource_local_to_scene = true
-font = ExtResource("19_ajjgt")
-font_size = 40
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsov7"]
 resource_local_to_scene = true
@@ -130,61 +121,57 @@ color = Color(0.14767182, 0.14767179, 0.14767179, 1)
 [node name="Energy" type="Sprite2D" parent="." unique_id=1178177614]
 position = Vector2(2299.0002, 887)
 scale = Vector2(0.7827003, 0.77898544)
-texture = ExtResource("18_vys3o")
 
-[node name="Conc" type="Label" parent="Energy" unique_id=447967751]
-offset_left = -90.71192
-offset_top = 8.98605
-offset_right = -50.71192
-offset_bottom = 91.98605
-text = "/"
-label_settings = SubResource("LabelSettings_r3r3k")
+[node name="Img2337" type="Sprite2D" parent="Energy" unique_id=1733170338]
+position = Vector2(-77.93579, 211.81396)
+scale = Vector2(0.25552565, 0.25674424)
+texture = ExtResource("22_g2ija")
 
-[node name="MaxConcentration" type="Label" parent="Energy/Conc" unique_id=484301506]
-layout_mode = 0
-offset_left = 25.55249
-offset_top = 24.390747
-offset_right = 94.54443
-offset_bottom = 88.39075
-text = "3"
-label_settings = SubResource("LabelSettings_blcw0")
+[node name="Img2338" type="Sprite2D" parent="Energy" unique_id=966312914]
+visible = false
+position = Vector2(-77.93579, 211.81396)
+scale = Vector2(0.25552565, 0.25674424)
+texture = ExtResource("23_skhyk")
 
-[node name="Concentration" type="Label" parent="Energy/Conc" unique_id=1160746985]
-layout_mode = 0
-offset_left = -54.93799
-offset_top = -5.1348877
-offset_right = 14.053955
-offset_bottom = 58.865112
-text = "3"
-label_settings = SubResource("LabelSettings_blcw0")
-horizontal_alignment = 2
+[node name="Label" type="Label" parent="Energy" unique_id=176611772]
+offset_left = -132.87357
+offset_top = 11.55349
+offset_right = -14.053986
+offset_bottom = 75.55349
+text = "1"
+label_settings = SubResource("LabelSettings_g4v7s")
+horizontal_alignment = 1
 
-[node name="Essence" type="Label" parent="Energy" unique_id=2109257457]
-offset_left = 63.881096
-offset_top = -77.02327
-offset_right = 103.881096
-offset_bottom = 5.9767303
-text = "/"
-label_settings = SubResource("LabelSettings_r3r3k")
+[node name="Time" type="Node2D" parent="Energy" unique_id=1194555998]
 
-[node name="MaxConcentration" type="Label" parent="Energy/Essence" unique_id=364109030]
-layout_mode = 0
-offset_left = 17.88672
-offset_top = 28.241833
-offset_right = 123.92993
-offset_bottom = 92.24184
-text = "3"
-label_settings = SubResource("LabelSettings_sq7yr")
+[node name="Time1" type="Sprite2D" parent="Energy/Time" unique_id=712616561]
+visible = false
+position = Vector2(152.03738, 15.404629)
+scale = Vector2(0.3044213, 0.3044213)
+texture = ExtResource("25_jlb0g")
 
-[node name="Concentration" type="Label" parent="Energy/Essence" unique_id=1799220836]
-layout_mode = 0
-offset_left = -88.15621
-offset_top = -2.5674453
-offset_right = 13.843788
-offset_bottom = 61.432556
-text = "3"
-label_settings = SubResource("LabelSettings_50g4q")
-horizontal_alignment = 2
+[node name="Time2" type="Sprite2D" parent="Energy/Time" unique_id=1026599906]
+visible = false
+position = Vector2(152.03735, 15.404663)
+scale = Vector2(0.30442128, 0.3044213)
+texture = ExtResource("26_88goi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Energy/Time" unique_id=21135952]
+visible = false
+position = Vector2(152.03738, 15.404629)
+scale = Vector2(0.3044213, 0.3044213)
+texture = ExtResource("27_u8awk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Energy/Time" unique_id=352112240]
+visible = false
+position = Vector2(152.03738, 15.404629)
+scale = Vector2(0.3044213, 0.3044213)
+texture = ExtResource("28_k8i5p")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Energy/Time" unique_id=1156281558]
+position = Vector2(152.03738, 15.404629)
+scale = Vector2(0.3044213, 0.3044213)
+texture = ExtResource("29_b47kv")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=835085032]
 offset_left = 2281.9998

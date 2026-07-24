@@ -114,6 +114,30 @@ func end_the_turn():
 	$Timer.start()
 	
 func visual_update():
+	$Energy/Time/Time1.visible=false
+	$Energy/Time/Time2.visible=false
+	$Energy/Time/Sprite2D2.visible=false
+	$Energy/Time/Sprite2D3.visible=false
+	$Energy/Time/Sprite2D4.visible=false
+	if CombatData.time==4:
+		$Energy/Time/Sprite2D4.visible=true
+	if CombatData.time==3:
+		$Energy/Time/Sprite2D3.visible=true
+	if CombatData.time==2:
+		$Energy/Time/Sprite2D2.visible=true
+	if CombatData.time==1:
+		$Energy/Time/Time2.visible=true
+	if CombatData.time==0:
+		$Energy/Time/Time1.visible=true
+	if CombatData.money==0:
+		$Energy/Img2337.visible=false
+		$Energy/Img2338.visible=true
+		$Energy/Label.visible=false
+	else:
+		$Energy/Img2337.visible=true
+		$Energy/Img2338.visible=false
+		$Energy/Label.visible=true
+		$Energy/Label.text=CombatData.standart_big_number(CombatData.money)
 	#$Energy/Conc/MaxConcentration.text=CombatData.standart_big_number(CombatData.max_concentration)
 	#$Energy/Conc/Concentration.text=CombatData.standart_big_number(CombatData.concentration)
 	#$Energy/Essence/MaxConcentration.text=CombatData.standart_big_number(CombatData.max_primeval_essence)

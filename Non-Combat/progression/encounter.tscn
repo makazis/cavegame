@@ -12,6 +12,7 @@
 script = ExtResource("1_k7m3y")
 
 [node name="Img2317" type="Sprite2D" parent="." unique_id=1849188193]
+visible = false
 position = Vector2(3.250002, -3.7083347)
 scale = Vector2(0.059052758, 0.047064923)
 texture = ExtResource("2_wgmgk")
@@ -52,3 +53,5 @@ offset_left = -43.0
 offset_top = -44.0
 offset_right = 47.0
 offset_bottom = 44.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -13,14 +13,16 @@ func _ready() -> void:
 			for ii in range(1):
 				var x=2560*((ii+1.)/2)+randi_range(-60,60)
 				var y=400+randi_range(-60,60)
-				encounters[-1].append([create_encounter_at(Vector2(x,y),"Enemy"),[]])
+				encounters[-1].append([create_encounter_at(Vector2(x,y)),[]])
+				encounters[-1][-1][0].setup("Enemy")
+				encounters[-1][-1][0].unlocked=true
 		else:
 			var enemy_count=randi_range(randi_range(last_enemy_count-1,last_enemy_count),randi_range(last_enemy_count,last_enemy_count+1))
 			enemy_count=max(1,min(5,enemy_count))
 			for ii in range(enemy_count):
 				var x=2560*((ii+(6-enemy_count)/2.)/(6.))+randi_range(-100,100)
 				var y=400+randi_range(-100,100)+i*300
-				encounters[-1].append([create_encounter_at(Vector2(x,y),"Enemy"),[]])
+				encounters[-1].append([create_encounter_at(Vector2(x,y)),[]])
 				var connections=randi_range(1,int(sqrt(last_enemy_count)))
 				connections=1
 				if ii==0 or ii==enemy_count-1:
@@ -63,17 +65,35 @@ func _ready() -> void:
 								#print(i," ",iii-1+ii," ",ii)
 								if not ii in encounters[-1][iii-1+ii][1]:
 									added_connections=true
-									#print(encounters[-1][iii-1+ii][1],ii)
 									encounters[-1][iii-1+ii][1].append(ii)
 									create_line_between(encounters[-1][iii-1+ii][0].global_position,encounters[-2][ii][0].global_position)
-							else:
-								pass
-								#print(i," ",iii-1+ii," ",ii,"<---")
+			for ii in range(enemy_count):
+				var ancestor_colors=[]
+				for iii in range(len(encounters[-1][ii][1])):
+					ancestor_colors.append(encounters[-2][encounters[-1][ii][1][iii]][0].color)
+				if not 2 in ancestor_colors:
+					if i>7:
+						if randi_range(1,4)==1:
+							encounters[-1][ii][0].setup("Elite")
+							continue
+				if not 1 in ancestor_colors:
+					if i>5:
+						if randi_range(1,4)==1:
+							encounters[-1][ii][0].setup("Resource")
+							continue
+						if randi_range(1,5)==1:
+							encounters[-1][ii][0].setup("Rest")
+							continue
+				if randi_range(1,2)==1:
+					encounters[-1][ii][0].setup("Enemy")
+					continue
+				encounters[-1][ii][0].setup("Random")
+				
+					
 			last_enemy_count=enemy_count
 
-func create_encounter_at(pos:Vector2,type:String="Enemy"):
+func create_encounter_at(pos:Vector2):
 	var temp_enemy=encounter.instantiate()
-	temp_enemy.setup(type)
 	temp_enemy.global_position=pos
 	$map.add_child(temp_enemy)
 	return temp_enemy

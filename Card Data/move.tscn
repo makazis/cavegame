@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://csox1ytpbk8ct"]
 
 [ext_resource type="Script" uid="uid://b5umulev15wt4" path="res://Card Data/move.gd" id="1_epxnr"]
-[ext_resource type="Texture2D" uid="uid://ddaquesfnhgab" path="res://Assets/CardBase.png" id="2_epxnr"]
+[ext_resource type="Texture2D" uid="uid://cbielbp88fsxr" path="res://Assets/IMG_2326.png" id="2_epxnr"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="3_45xvj"]
+[ext_resource type="Texture2D" uid="uid://kas7clnooyjs" path="res://Assets/IMG_2327.png" id="4_xg8ua"]
+[ext_resource type="Texture2D" uid="uid://bnw3pf18ojobt" path="res://Assets/IMG_2328.png" id="5_j37yn"]
+[ext_resource type="Texture2D" uid="uid://b62bya3bgwy5w" path="res://Assets/IMG_2329.png" id="6_dx1el"]
+[ext_resource type="Texture2D" uid="uid://du8mnsf4t03o5" path="res://Assets/IMG_2330.png" id="7_xvk3f"]
+[ext_resource type="Texture2D" uid="uid://c8kyg713d2mu" path="res://Assets/IMG_2331.png" id="8_os3pa"]
+[ext_resource type="Texture2D" uid="uid://ch1df4pi6xct5" path="res://Assets/IMG_2332.png" id="9_s4q5b"]
+[ext_resource type="Texture2D" uid="uid://0efuwqd0pnyx" path="res://Assets/IMG_2333.png" id="10_gsk0k"]
+[ext_resource type="Texture2D" uid="uid://cex8i6gifygct" path="res://Assets/IMG_2334.png" id="11_qufvt"]
+[ext_resource type="Texture2D" uid="uid://bvf5khk03niom" path="res://Assets/IMG_2335.png" id="12_deldk"]
+[ext_resource type="Texture2D" uid="uid://b5ntxt013vhxd" path="res://Assets/IMG_2336.png" id="13_gorn4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dbv13"]
 font = ExtResource("3_45xvj")
-font_size = 50
+font_size = 100
 outline_size = 1
 outline_color = Color(0.7581918, 0.7581918, 0.7581917, 1)
 
@@ -28,35 +38,26 @@ size = Vector2i(240, 336)
 render_target_update_mode = 4
 
 [node name="DefaultCardSprite" type="Sprite2D" parent="SubViewport" unique_id=373301019]
-position = Vector2(117.150475, 157)
-scale = Vector2(0.34942845, 0.2971761)
+position = Vector2(114.49999, 163.99998)
+scale = Vector2(0.17326139, 0.14740367)
 texture = ExtResource("2_epxnr")
 
-[node name="Label4" type="Label" parent="SubViewport/DefaultCardSprite" unique_id=2066093246]
-offset_left = -335.26315
-offset_top = -360.0559
-offset_right = -160.30011
-offset_bottom = -158.05597
-text = "1"
-label_settings = SubResource("LabelSettings_dbv13")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label" type="Label" parent="SubViewport/DefaultCardSprite" unique_id=128678850]
-offset_left = -278.0268
-offset_top = -20.190033
-offset_right = 297.1983
-offset_bottom = 84.12521
+offset_left = -585.82
+offset_top = -52.52182
+offset_right = 614.67816
+offset_bottom = 150.56326
 text = "Strike"
 label_settings = SubResource("LabelSettings_dbv13")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="SubViewport/DefaultCardSprite" unique_id=42169634]
-offset_left = -215.06685
-offset_top = 107.68025
-offset_right = 166.98567
-offset_bottom = 439.68024
+custom_maximum_size = Vector2(1005, -1)
+offset_left = -580.04834
+offset_top = 227.59555
+offset_right = 425.1764
+offset_bottom = 892.87415
 scale = Vector2(1.2, 1.2)
 text = "first line
 second line
@@ -68,12 +69,42 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Label3" type="Label" parent="SubViewport/DefaultCardSprite" unique_id=449251263]
-offset_left = -318.09222
-offset_top = -491.2912
-offset_right = -154.96869
-offset_bottom = -323.04077
-text = "0"
-label_settings = SubResource("LabelSettings_dbv13")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="One Money" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=1504814878]
+visible = false
+texture = ExtResource("4_xg8ua")
+
+[node name="Two Money" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=1133801440]
+visible = false
+texture = ExtResource("5_j37yn")
+
+[node name="Three Money" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=1049887715]
+visible = false
+texture = ExtResource("6_dx1el")
+
+[node name="Four Money" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=35674505]
+visible = false
+texture = ExtResource("7_xvk3f")
+
+[node name="Five Money" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=122740299]
+visible = false
+texture = ExtResource("8_os3pa")
+
+[node name="No Time" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=342367213]
+visible = false
+texture = ExtResource("9_s4q5b")
+
+[node name="One Time" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=1020627124]
+visible = false
+texture = ExtResource("10_gsk0k")
+
+[node name="Two Time" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=604347791]
+visible = false
+texture = ExtResource("11_qufvt")
+
+[node name="Three Time" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=950986506]
+visible = false
+texture = ExtResource("12_deldk")
+
+[node name="Four Time" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=921300715]
+visible = false
+texture = ExtResource("13_gorn4")

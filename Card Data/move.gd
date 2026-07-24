@@ -3,8 +3,7 @@ extends CardLayout
 
 @onready var name_label: Label = $SubViewport/DefaultCardSprite/Label
 @onready var description_label: Label = $SubViewport/DefaultCardSprite/Label2
-@onready var c_cost_label: Label = $SubViewport/DefaultCardSprite/Label3
-@onready var pe_cost_label: Label = $SubViewport/DefaultCardSprite/Label4
+
 @onready var sprite=$SubViewport/DefaultCardSprite
 #@onready var image: TextureRect = %CardImage
 
@@ -13,6 +12,23 @@ func _update_display() -> void:
 	if data:
 		name_label.text = data.card_name
 		description_label.text = data.card_description
-		c_cost_label.text = str(data.c_cost)
-		pe_cost_label.text = str(data.pe_cost)
+		if data.time_cost==0:
+			$"SubViewport/DefaultCardSprite/No Time".visible=true
+		if data.time_cost==1:
+			$"SubViewport/DefaultCardSprite/One Time".visible=true
+		if data.time_cost==2:
+			$"SubViewport/DefaultCardSprite/Two Time".visible=true
+		if data.time_cost==3:
+			$"SubViewport/DefaultCardSprite/Three Time".visible=true
+		if data.time_cost==4:
+			$"SubViewport/DefaultCardSprite/Four Time".visible=true
+		if data.money_cost==4:
+			$"SubViewport/DefaultCardSprite/Four Money".visible=true
+		if data.money_cost==3:
+			$"SubViewport/DefaultCardSprite/Three Money".visible=true
+		if data.money_cost==2:
+			$"SubViewport/DefaultCardSprite/Two Money".visible=true
+		if data.money_cost==1:
+			$"SubViewport/DefaultCardSprite/One Money".visible=true
+		
 	display_updated.emit()

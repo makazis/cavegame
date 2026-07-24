@@ -1,9 +1,9 @@
 extends Node
 
-var primeval_essence=3
-var max_primeval_essence=3
-var concentration=3
-var max_concentration=3
+var money=3
+var max_money=3
+var time=4
+var max_time=4
 var turn=0
 
 ## Variables that stay between combats:

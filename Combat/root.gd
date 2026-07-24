@@ -96,7 +96,7 @@ func setup_entities(Friendly,Enemy): #expects 2 arrays of creature nodes, but br
 
 func start_the_turn():
 	CombatData.turn+=1
-	CombatData.concentration=CombatData.max_concentration
+	CombatData.time=CombatData.max_time
 	
 	$Deck.deal_to($Hand,5)
 	CombatData.start_turn.emit(CombatData.turn)
@@ -114,11 +114,12 @@ func end_the_turn():
 	$Timer.start()
 	
 func visual_update():
-	$Energy/Conc/MaxConcentration.text=CombatData.standart_big_number(CombatData.max_concentration)
-	$Energy/Conc/Concentration.text=CombatData.standart_big_number(CombatData.concentration)
-	$Energy/Essence/MaxConcentration.text=CombatData.standart_big_number(CombatData.max_primeval_essence)
-	$Energy/Essence/Concentration.text=CombatData.standart_big_number(CombatData.primeval_essence)
-	
+	#$Energy/Conc/MaxConcentration.text=CombatData.standart_big_number(CombatData.max_concentration)
+	#$Energy/Conc/Concentration.text=CombatData.standart_big_number(CombatData.concentration)
+	#$Energy/Essence/MaxConcentration.text=CombatData.standart_big_number(CombatData.max_primeval_essence)
+	#$Energy/Essence/Concentration.text=CombatData.standart_big_number(CombatData.primeval_essence)
+	pass
+	#fuck you
 func draw_cards(card_count:int=1):
 	for i in range(card_count):
 		await get_tree().create_timer(0.2).timeout

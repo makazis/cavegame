@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 					closest_distance=entity_distance
 			target_creature.target_indicator.color=Color(0.832, 0.315, 0.43, 0.463)
 func _handle_dragged_card(card: Card) -> void:
-	if card.card_data.c_cost>CombatData.concentration or card.card_data.pe_cost>CombatData.primeval_essence or "Unplayable" in card.card_tag_ids: #Card is not to be played
+	if card.card_data.time_cost>CombatData.time or card.card_data.money_cost>CombatData.money or "Unplayable" in card.card_tag_ids: #Card is not to be played
 		wait_till_dropped=2
 		#_finish_card_drop.call_deferred(true)
 		return
@@ -66,8 +66,8 @@ func _finish_card_drop() -> void:
 		
 		emit_signal("card_played",_dragged_card)
 		
-		CombatData.concentration-=_dragged_card.card_data.c_cost
-		CombatData.primeval_essence-=_dragged_card.card_data.pe_cost
+		CombatData.money-=_dragged_card.card_data.money_cost
+		CombatData.time-=_dragged_card.card_data.time_cost
 		CombatData.root_visual_update.emit()
 		
 		

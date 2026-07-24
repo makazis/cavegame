@@ -51,11 +51,11 @@ font_size = 50
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsov7"]
 resource_local_to_scene = true
-size = Vector2(1232, 1241)
+size = Vector2(1232, 842)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgq65"]
 resource_local_to_scene = true
-size = Vector2(1232, 956)
+size = Vector2(1232, 754)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axbwd"]
 size = Vector2(1232, 1241)
@@ -190,14 +190,14 @@ one_shot = true
 position = Vector2(1880, 602)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea4" unique_id=1810447271]
-position = Vector2(44, 28.5)
+position = Vector2(44, -171)
 shape = SubResource("RectangleShape2D_jsov7")
 
 [node name="DragArea3" type="Area2D" parent="." unique_id=220950517]
 position = Vector2(1880, 602)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea3" unique_id=30001419]
-position = Vector2(44, -114)
+position = Vector2(44, -215)
 shape = SubResource("RectangleShape2D_cgq65")
 
 [node name="DragArea2" type="Area2D" parent="." unique_id=387482346]

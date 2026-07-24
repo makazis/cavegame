@@ -30,7 +30,7 @@ offset_left = 310.0
 offset_top = 12.0
 offset_right = 1376.0
 offset_bottom = 111.0
-text = "Gu Worm"
+text = "New Card"
 label_settings = SubResource("LabelSettings_g4v7s")
 vertical_alignment = 1
 

@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://bmvoyromsavnj"]
 
+[ext_resource type="Script" uid="uid://bc57pg5t224g4" path="res://Non-Combat/progression/encounter.gd" id="1_k7m3y"]
+
 [node name="Encounter" type="Node2D" unique_id=774048757]
+script = ExtResource("1_k7m3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1578685028]

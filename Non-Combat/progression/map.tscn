@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://dc58mwayvn1wr"]
 
+[ext_resource type="Script" uid="uid://bky3ekjj1msa8" path="res://Non-Combat/progression/map.gd" id="1_ihwfi"]
+
 [node name="Map" type="Node2D" unique_id=989293573]
+script = ExtResource("1_ihwfi")

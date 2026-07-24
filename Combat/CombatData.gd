@@ -34,7 +34,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
+func setup_combat():
+	pass
 func gu_worm_start_of_turn_effects(turn_number:int):
 	for worm in player_gu_worms:
 		worm.start_turn(turn_number)

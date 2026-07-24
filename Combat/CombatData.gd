@@ -9,7 +9,7 @@ var turn=0
 ## Variables that stay between combats:
 var player_hp=70
 var player_companions=[] # a list containing data of every companion that the player has. 
-var player_gu_worms:Array[Gu_card]=[load("res://Card Data/Gu/Strength Path/Dog Strength Gu/dog_strength_gu.tres"),load("res://Card Data/Gu/Strength Path/one jin strength gu/jin_strength_gu.tres")]
+var player_gu_worms:Array[Gu_card]=[load("res://Card Data/Gu/Strength Path/Dog Strength Gu/dog_strength_gu.tres")]
 
 signal card_played(card:Card)
 signal card_drawn(card:Card)

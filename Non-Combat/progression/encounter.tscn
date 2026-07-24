@@ -1,8 +1,54 @@
 [gd_scene format=3 uid="uid://bmvoyromsavnj"]
 
 [ext_resource type="Script" uid="uid://bc57pg5t224g4" path="res://Non-Combat/progression/encounter.gd" id="1_k7m3y"]
+[ext_resource type="Texture2D" uid="uid://uw086k1e5aie" path="res://Assets/IMG_2317.png" id="2_wgmgk"]
+[ext_resource type="Texture2D" uid="uid://b0m0oqr8h3s0y" path="res://Assets/IMG_2318.png" id="3_ondrv"]
+[ext_resource type="Texture2D" uid="uid://csdgso4xofxxn" path="res://Assets/IMG_2319.png" id="4_pb08c"]
+[ext_resource type="Texture2D" uid="uid://dqp1aatwsprdq" path="res://Assets/IMG_2320.png" id="5_rnnl5"]
+[ext_resource type="Texture2D" uid="uid://dp7hf22o1ea1g" path="res://Assets/IMG_2321.png" id="6_4esyn"]
+[ext_resource type="Texture2D" uid="uid://cxyh31gro0bxj" path="res://Assets/IMG_2322.png" id="7_e7d48"]
 
 [node name="Encounter" type="Node2D" unique_id=774048757]
 script = ExtResource("1_k7m3y")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1578685028]
+[node name="Img2317" type="Sprite2D" parent="." unique_id=1849188193]
+position = Vector2(3.250002, -3.7083347)
+scale = Vector2(0.059052758, 0.047064923)
+texture = ExtResource("2_wgmgk")
+
+[node name="Img2318" type="Sprite2D" parent="." unique_id=2044873313]
+visible = false
+position = Vector2(4, -5.91232)
+scale = Vector2(0.05680456, 0.05185287)
+texture = ExtResource("3_ondrv")
+
+[node name="Img2319" type="Sprite2D" parent="." unique_id=340429688]
+visible = false
+position = Vector2(-5.999999, 1)
+scale = Vector2(0.10071942, 0.10071943)
+texture = ExtResource("4_pb08c")
+
+[node name="Img2320" type="Sprite2D" parent="." unique_id=1814041058]
+visible = false
+position = Vector2(13, 11)
+scale = Vector2(0.07128658, 0.07128658)
+texture = ExtResource("5_rnnl5")
+
+[node name="Img2321" type="Sprite2D" parent="." unique_id=1983731848]
+visible = false
+position = Vector2(8.999989, 7.9999695)
+scale = Vector2(0.07470731, 0.07470731)
+texture = ExtResource("6_4esyn")
+
+[node name="Img2322" type="Sprite2D" parent="." unique_id=319925785]
+visible = false
+position = Vector2(3, 0)
+scale = Vector2(0.06354916, 0.06354916)
+texture = ExtResource("7_e7d48")
+
+[node name="Button" type="Button" parent="." unique_id=1273869521]
+modulate = Color(1, 1, 1, 0)
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 47.0
+offset_bottom = 44.0

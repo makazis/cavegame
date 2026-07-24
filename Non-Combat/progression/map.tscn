@@ -2,5 +2,22 @@
 
 [ext_resource type="Script" uid="uid://bky3ekjj1msa8" path="res://Non-Combat/progression/map.gd" id="1_ihwfi"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(2558, 1258)
+
 [node name="Map" type="Node2D" unique_id=989293573]
 script = ExtResource("1_ihwfi")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=639720486]
+z_index = -100
+offset_right = 2560.0
+offset_bottom = 1260.0
+color = Color(1, 0.8627451, 0.6117647, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=552724803]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1040657782]
+position = Vector2(1280, 630)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="map" type="Node2D" parent="." unique_id=1673681967]

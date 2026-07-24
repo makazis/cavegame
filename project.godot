@@ -26,11 +26,12 @@ CombatData="*uid://b5tq7vruloerc"
 
 window/size/viewport_width=2560
 window/size/viewport_height=1260
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/project-time-tracker/plugin.cfg", "res://addons/simple_cards/plugin.cfg")
+enabled=PackedStringArray("res://addons/simple_cards/plugin.cfg")
 
 [input]
 

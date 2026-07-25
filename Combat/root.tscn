@@ -243,6 +243,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_top = -1260.0
 offset_right = 2560.0
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Control" unique_id=1008773529]
 layout_mode = 0
@@ -270,6 +271,7 @@ metadata/_custom_type_script = "uid://bbi8i6vef3f6y"
 layout_mode = 0
 offset_right = 2560.0
 offset_bottom = 1260.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0.20784314)
 
 [node name="Button" type="Button" parent="Control" unique_id=1327380349]

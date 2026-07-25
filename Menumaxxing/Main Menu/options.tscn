@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ob31ugw0xn82"]
+
+[ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="1_qkldp"]
+[ext_resource type="Script" uid="uid://cimxlhstcekfe" path="res://Menumaxxing/Main Menu/options.gd" id="1_x4oqm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1_qkldp")
+font_size = 50
+
+[node name="Options" type="Node2D" unique_id=1607311279]
+script = ExtResource("1_x4oqm")
+
+[node name="Label" type="Label" parent="." unique_id=580302674]
+offset_left = 218.0
+offset_top = 117.0
+offset_right = 572.0
+offset_bottom = 309.0
+text = "The options are around here somewhere
+But i won't tell you what they are or do. 
+Escape by pressing ESC"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="Shake1" type="CheckButton" parent="." unique_id=605508231]
+offset_left = 2041.0001
+offset_top = 718.00006
+offset_right = 2089.0
+offset_bottom = 745.00006
+scale = Vector2(6.0226345, 6.0226345)
+
+[node name="Shake2" type="CheckButton" parent="." unique_id=363121907]
+offset_left = 2628.0
+offset_top = 966.00006
+offset_right = 2676.0
+offset_bottom = 993.00006
+scale = Vector2(6.0226345, 6.0226345)
+
+[node name="Shake3" type="CheckButton" parent="." unique_id=1686570373]
+offset_left = 2955.0002
+offset_top = 605.0
+offset_right = 3003.0002
+offset_bottom = 632.0
+scale = Vector2(6.0226345, 6.0226345)
+
+[node name="Shake4" type="CheckButton" parent="." unique_id=1189144831]
+offset_left = 36.00003
+offset_top = 906.00024
+offset_right = 84.00003
+offset_bottom = 933.00024
+scale = Vector2(6.0226345, 6.0226345)
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1008405302]
+offset_left = 3459.0
+offset_top = 1709.0
+offset_right = 3916.0
+offset_bottom = 1849.0
+text = "1.5"
+expand_to_text_length = true
+virtual_keyboard_type = 3
+caret_blink = true
+caret_mid_grapheme = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1812475099]
+anchor_mode = 0
+
+[connection signal="toggled" from="Shake1" to="." method="_on_shake_1_toggled"]
+[connection signal="toggled" from="Shake2" to="." method="_on_shake_2_toggled"]
+[connection signal="toggled" from="Shake3" to="." method="_on_shake_3_toggled"]
+[connection signal="toggled" from="Shake4" to="." method="_on_shake_4_toggled"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

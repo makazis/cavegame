@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://wnvlke0vo18j" path="res://Non-Combat/root.gd" id="1_igkdj"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="2_hjd13"]
+[ext_resource type="Script" uid="uid://odthh67wbej3" path="res://Non-Combat/camera_2d.gd" id="2_mb442"]
 [ext_resource type="PackedScene" uid="uid://wtjqtvkrv78y" path="res://Combat/root.tscn" id="3_hjd13"]
 [ext_resource type="PackedScene" uid="uid://dc58mwayvn1wr" path="res://Non-Combat/progression/map.tscn" id="5_r07rg"]
 [ext_resource type="Script" uid="uid://bisyk4bowdvsf" path="res://addons/simple_cards/deck/manager/card_deck_manager.gd" id="6_3b8bv"]
@@ -14,16 +15,17 @@
 [ext_resource type="Script" uid="uid://lhb5ry3o8icy" path="res://addons/simple_cards/deck/card_deck.gd" id="12_5l04m"]
 [ext_resource type="PackedScene" uid="uid://bbtuayi2137ai" path="res://Non-Combat/card rewards/card_reward_screen.tscn" id="13_7olg0"]
 [ext_resource type="Resource" uid="uid://clm8s8vofvwy6" path="res://Card Data/John Politiican/Test/test.tres" id="13_526gw"]
+[ext_resource type="PackedScene" uid="uid://btdkswm55gbmu" path="res://Shitposting/MusicPlayerTrustMeBro.tscn" id="16_38q5j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font = ExtResource("2_hjd13")
 font_size = 32
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb442"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38q5j"]
 resource_local_to_scene = true
 size = Vector2(1232, 1241)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_38q5j"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwoyh"]
 resource_local_to_scene = true
 size = Vector2(1232, 956)
 
@@ -37,6 +39,8 @@ script = ExtResource("1_igkdj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2069670562]
 texture_filter = 2
+ignore_rotation = false
+script = ExtResource("2_mb442")
 
 [node name="Panel" type="Panel" parent="Camera2D" unique_id=1805718938]
 offset_left = -1280.0
@@ -74,10 +78,10 @@ offset_right = 2304.0
 offset_bottom = 1446.0
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea4" parent_id_path=PackedInt32Array(1328499140, 1743876184) index="0" unique_id=1810447271]
-shape = SubResource("RectangleShape2D_mb442")
+shape = SubResource("RectangleShape2D_38q5j")
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea3" parent_id_path=PackedInt32Array(1328499140, 220950517) index="0" unique_id=30001419]
-shape = SubResource("RectangleShape2D_38q5j")
+shape = SubResource("RectangleShape2D_iwoyh")
 
 [node name="PostCombatRewards" parent="Screens" unique_id=130116637 instance=ExtResource("10_5htkc")]
 position = Vector2(3840, -630)
@@ -96,6 +100,8 @@ script = ExtResource("6_3b8bv")
 deck = SubResource("Resource_g4v7s")
 starting_pile = NodePath("../Screens/Root/Deck")
 metadata/_custom_type_script = "uid://bisyk4bowdvsf"
+
+[node name="MusicPlayerTrustMeBro" parent="." unique_id=2054029648 instance=ExtResource("16_38q5j")]
 
 [editable path="Screens/Root"]
 [editable path="Screens/Map"]

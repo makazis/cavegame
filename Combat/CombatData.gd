@@ -22,7 +22,12 @@ signal root_visual_update()
 signal start_turn(turn_index:int)
 signal end_turn(turn_index:int)
 signal end_game()
+signal I_NEED_MORE_SCREEN_SHAKE(screen_shake:int)
+
 var short_pause=false
+
+
+var is_select_sequence_open=false
 
 func standart_big_number(num:int):
 	for i in range(11):
@@ -46,3 +51,4 @@ func gu_worm_start_of_turn_effects(turn_number:int):
 		worm.start_turn(turn_number)
 func on_card_clicked(card:Card):
 	print(card.card_data.card_name)
+	EffectContext.roles["Caster"][0].combat_root.on_card_clicked(card)

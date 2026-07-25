@@ -90,7 +90,7 @@ func summon_entity(_creature:Creature_Node):
 			uf_space_y-=uf_y_window_size
 			uf_y_window_size=256*_creature.data.display_size+200
 		_creature.position.x=uf_space_x+random_x_bonus
-		_creature.position.y=uf_space_y+random_y_bonus
+		_creature.position.y=uf_space_y+random_y_bonus+200
 		uf_space_x+=_creature.data.display_size*256+random_x_bonus
 		$"UnFriendly Characters/Friends".add_child(_creature)
 func setup_entities(Friendly,Enemy): #expects 2 arrays of creature nodes, but breaks if it's added in the code, idk why
@@ -251,20 +251,35 @@ func _on_drag_area2_2_mouse_exited() -> void:
 	dragging_unfriendly_area=false
 
 var cards_selected=[]
-var is_select_sequence_open=false
-func start_card_select_sequence(_cards_selected=1,words_at_top="Select a card to discard"):
+var max_selected_cards=1
+
+var hen_effect=null
+func start_card_select_sequence(_cards_selected=1,words_at_top="Select a card to discard",then_effect:Effect=null):
+	max_selected_cards=_cards_selected
+	hen_effect=then_effect
 	if len($Hand.cards)<_cards_selected:
 		for card in $Hand.cards:
 			cards_selected.append(card)
 		$Hand.cards.clear()
 		return
 	$Control.position=Vector2(0,0)
-	is_select_sequence_open=true
-	await button_resolves
-	is_select_sequence_open=false
-	$Control.position=Vector2(0,-1260)
-	return []
+	CombatData.is_select_sequence_open=true
+	#await button_resolves
 
-signal button_resolves()
+
 func _on_button_pressed() -> void:
-	button_resolves.emit()
+	EffectContext.roles["Selected Cards"]=[]
+	
+	for card in $Control/CardHand.cards:
+		card.move_to($Hand, Card.MoveConfig.new(0))
+		EffectContext.roles["Selected Cards"].append(card)
+	CombatData.is_select_sequence_open=false
+	$Control.position=Vector2(0,-1260)
+	if hen_effect!=null:
+		hen_effect.process()
+func on_card_clicked(card:Card):
+	if card in $Hand.cards:
+		if len($Control/CardHand.cards)<max_selected_cards:
+			card.move_to($Control/CardHand, Card.MoveConfig.new(0))
+	else:
+		card.move_to($Hand, Card.MoveConfig.new(0))

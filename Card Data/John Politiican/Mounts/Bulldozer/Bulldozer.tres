@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://beow1nqrtah61"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_lncxf"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_h7e71"]
+[ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="2_ioru2"]
+[ext_resource type="Resource" uid="uid://cfsn8m87maibi" path="res://Card Data/John Politiican/Mounts/Bulldozer/bulldozermounteffect.tres" id="2_thrdf"]
+[ext_resource type="Script" uid="uid://c5fwf2ionwh12" path="res://Effect Building/Card Tomfoolery/dismounteffect.gd" id="3_thrdf"]
+[ext_resource type="Resource" uid="uid://b2jq8ldcisqih" path="res://Card Data/John Politiican/Mounts/Bulldozer/bulldozer dig.tres" id="3_wkk8g"]
+[ext_resource type="Resource" uid="uid://pyo5rbmelx0g" path="res://Card Data/John Politiican/Mounts/Bulldozer/BulldozerRam.tres" id="4_c7vch"]
+[ext_resource type="Resource" uid="uid://fsm7douc2t7o" path="res://Card Data/John Politiican/Mounts/Bulldozer/bulldozer_parry.tres" id="5_tmbb8"]
+[ext_resource type="Resource" uid="uid://7uqdjs0rm1s8" path="res://Card Data/John Politiican/Mounts/Bulldozer/dismountbulldozer.tres" id="6_r2cty"]
+
+[sub_resource type="Resource" id="Resource_i3odp"]
+script = ExtResource("2_ioru2")
+created_card_data = ExtResource("6_r2cty")
+place_where = "DismountPile"
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_bevtb"]
+script = ExtResource("2_ioru2")
+created_card_data = ExtResource("5_tmbb8")
+place_where = "Deck"
+next_effect = SubResource("Resource_i3odp")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_6c2ef"]
+script = ExtResource("2_ioru2")
+created_card_data = ExtResource("4_c7vch")
+place_where = "Deck"
+next_effect = SubResource("Resource_bevtb")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_lferd"]
+script = ExtResource("2_ioru2")
+created_card_data = ExtResource("3_wkk8g")
+place_where = "Deck"
+next_effect = SubResource("Resource_6c2ef")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_wkah8"]
+script = ExtResource("2_ioru2")
+created_card_data = ExtResource("2_thrdf")
+place_where = "StartOfTurnGetsPlayed"
+next_effect = SubResource("Resource_lferd")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_kmevl"]
+script = ExtResource("3_thrdf")
+next_effect = SubResource("Resource_wkah8")
+metadata/_custom_type_script = "uid://c5fwf2ionwh12"
+
+[resource]
+script = ExtResource("2_h7e71")
+money_cost = 0
+time_cost = 3
+card_name = "Bulldozer"
+card_description = "Mount. Gain 20 block each turn. gain 2 less time each turn"
+effect = SubResource("Resource_kmevl")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

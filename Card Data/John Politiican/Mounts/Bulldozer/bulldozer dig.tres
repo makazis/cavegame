@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://b2jq8ldcisqih"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_80e73"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_miyd0"]
+[ext_resource type="Script" uid="uid://qesbnyyx47gf" path="res://Effect Building/Combat/Dig.gd" id="2_ow6ov"]
+
+[sub_resource type="Resource" id="Resource_ow6ov"]
+script = ExtResource("2_ow6ov")
+dig = 30
+metadata/_custom_type_script = "uid://qesbnyyx47gf"
+
+[resource]
+script = ExtResource("2_miyd0")
+money_cost = 0
+time_cost = 2
+card_name = "Bulldozer Dig"
+card_description = "dig 30"
+effect = SubResource("Resource_ow6ov")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

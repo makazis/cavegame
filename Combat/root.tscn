@@ -1,26 +1,19 @@
 [gd_scene format=3 uid="uid://wtjqtvkrv78y"]
 
 [ext_resource type="Script" uid="uid://5brbuxyb7kh" path="res://Combat/root.gd" id="1_cgq65"]
-[ext_resource type="Resource" uid="uid://c0ssu5tm5k8jh" path="res://Card Data/Gu/Wind Path/Quartz Northwind Gu/wind_step.tres" id="7_cf78l"]
+[ext_resource type="Resource" uid="uid://x08r57e1mwbk" path="res://Card Data/John Politiican/defend.tres" id="5_cgq65"]
+[ext_resource type="Resource" uid="uid://c1jq44mgb3s2n" path="res://Card Data/John Politiican/Strike.tres" id="6_jsov7"]
+[ext_resource type="Resource" uid="uid://dkl6wx2h2orm5" path="res://Card Data/John Politiican/Dig.tres" id="7_lferd"]
+[ext_resource type="Resource" uid="uid://n6abwd277h7o" path="res://Card Data/John Politiican/ShovelStrike.tres" id="8_jsov7"]
 [ext_resource type="Script" uid="uid://bkxlv2512vggc" path="res://Combat/deck.gd" id="9_71fpb"]
-[ext_resource type="Resource" uid="uid://b4pi3ovfh02uo" path="res://Card Data/Gu/Wind Path/Quartz Northwind Gu/sidestep.tres" id="9_cf78l"]
+[ext_resource type="Resource" uid="uid://cavc5ala67ft4" path="res://Card Data/John Politiican/Mounts/Bicycle/Bicycle.tres" id="9_lferd"]
 [ext_resource type="Script" uid="uid://bisyk4bowdvsf" path="res://addons/simple_cards/deck/manager/card_deck_manager.gd" id="10_kffyy"]
-[ext_resource type="Resource" uid="uid://o3bveccqq3pp" path="res://Card Data/Gu/Wind Path/Quartz Northwind Gu/quartz_calcification.tres" id="11_axbwd"]
+[ext_resource type="Resource" uid="uid://beow1nqrtah61" path="res://Card Data/John Politiican/Mounts/Bulldozer/Bulldozer.tres" id="10_kp6kh"]
 [ext_resource type="Script" uid="uid://c8315v58tr66b" path="res://addons/simple_cards/card/card_resource/card_resource.gd" id="11_g2ija"]
-[ext_resource type="Resource" uid="uid://dyfj4elrqudsi" path="res://Card Data/Gu/Strength Path/Dog Strength Gu/dogslam.tres" id="12_cgq65"]
-[ext_resource type="Resource" uid="uid://cccfo5swo1inr" path="res://Card Data/Gu/Martial Moves/strike.tres" id="12_skhyk"]
-[ext_resource type="Resource" uid="uid://d4nhhtayminlq" path="res://Card Data/Gu/Martial Moves/defend.tres" id="13_jlb0g"]
-[ext_resource type="Resource" uid="uid://byj5qiohqncqk" path="res://Card Data/Gu/Strength Path/Dog Strength Gu/dogbark.tres" id="13_jsov7"]
-[ext_resource type="Resource" uid="uid://d2n8c2u7fyyx1" path="res://Card Data/Gu/Martial Moves/sword_boomerang.tres" id="13_lferd"]
 [ext_resource type="Script" uid="uid://lhb5ry3o8icy" path="res://addons/simple_cards/deck/card_deck.gd" id="14_88goi"]
-[ext_resource type="Resource" uid="uid://btx77a6ge1sal" path="res://Card Data/Gu/Wind Path/Quartz Northwind Gu/escape_the_fog.tres" id="14_kp6kh"]
-[ext_resource type="Resource" uid="uid://b764u3r0bej0i" path="res://Card Data/Gu/Strength Path/Dog Strength Gu/houndfangs.tres" id="15_71fpb"]
-[ext_resource type="Resource" uid="uid://bhlm57ymeitr2" path="res://Card Data/Gu/Strength Path/Dog Strength Gu/dogpile.tres" id="15_lferd"]
 [ext_resource type="Script" uid="uid://cqlyvmgm30540" path="res://Combat/hand.gd" id="15_u8awk"]
-[ext_resource type="Resource" uid="uid://deptuw461x50x" path="res://Card Data/Gu/Wind Path/Quartz Northwind Gu/airdash.tres" id="15_x6wr7"]
 [ext_resource type="Script" uid="uid://cgtxv1fnflwfu" path="res://addons/simple_cards/shape/premade_shapes/arc_shape.gd" id="16_k8i5p"]
 [ext_resource type="Script" uid="uid://d2l8uaoel5whd" path="res://addons/simple_cards/containers/pile/card_pile.gd" id="17_b47kv"]
-[ext_resource type="Resource" uid="uid://cckhgs0wjkswd" path="res://Card Data/Gu/Martial Moves/test_card.tres" id="17_x6wr7"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="19_ajjgt"]
 [ext_resource type="Texture2D" uid="uid://b5hnow1oi63sd" path="res://Assets/EndTurnButton.png" id="20_5y3d7"]
 [ext_resource type="BitMap" uid="uid://7k554wiexp0c" path="res://Assets/EndTurnButtonBitmap.bmp" id="21_i8h5o"]
@@ -35,7 +28,7 @@
 [sub_resource type="Resource" id="Resource_r3r3k"]
 script = ExtResource("14_88goi")
 deck_name = &"TestDeck"
-cards = Array[ExtResource("11_g2ija")]([ExtResource("12_skhyk"), ExtResource("15_71fpb"), ExtResource("7_cf78l"), ExtResource("9_cf78l"), ExtResource("15_lferd"), ExtResource("13_jlb0g"), ExtResource("11_axbwd"), ExtResource("12_cgq65"), ExtResource("13_jsov7"), ExtResource("14_kp6kh"), ExtResource("15_x6wr7"), ExtResource("13_lferd"), ExtResource("17_x6wr7")])
+cards = Array[ExtResource("11_g2ija")]([ExtResource("5_cgq65"), ExtResource("5_cgq65"), ExtResource("5_cgq65"), ExtResource("5_cgq65"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("7_lferd"), ExtResource("8_jsov7"), ExtResource("9_lferd"), ExtResource("10_kp6kh")])
 metadata/_custom_type_script = "uid://lhb5ry3o8icy"
 
 [sub_resource type="Resource" id="Resource_gd4vy"]
@@ -225,6 +218,18 @@ position = Vector2(1880, 602)
 
 [node name="Friends" type="Node2D" parent="UnFriendly Characters" unique_id=1490923858]
 position = Vector2(-459, -326)
+
+[node name="StartOfTurnGetsPlayed" type="Panel" parent="." unique_id=1248427174]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_b47kv")
+metadata/_custom_type_script = "uid://d2l8uaoel5whd"
+
+[node name="DismountPile" type="Panel" parent="." unique_id=115058703]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_b47kv")
+metadata/_custom_type_script = "uid://d2l8uaoel5whd"
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

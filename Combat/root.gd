@@ -98,8 +98,11 @@ func start_the_turn():
 	CombatData.turn+=1
 	CombatData.time=CombatData.max_time
 	
+	
 	$Deck.deal_to($Hand,5)
 	CombatData.start_turn.emit(CombatData.turn)
+	for card in $"StartOfTurnGetsPlayed".cards:
+		await card.play()
 	visual_update()
 func end_the_turn():
 	
@@ -157,7 +160,17 @@ func create_card_in(card_resource:CardResource,card_pile:String="Hand"):
 		card.move_to($DiscardPile, Card.MoveConfig.new(0))
 	if card_pile=="Deck":
 		card.move_to($Deck, Card.MoveConfig.new(0))
+	if card_pile=="StartOfTurnGetsPlayed":
+		card.move_to($StartOfTurnGetsPlayed, Card.MoveConfig.new(0))
+	if card_pile=="DismountPile":
+		card.move_to($DismountPile, Card.MoveConfig.new(0))
 	
+func get_cards_in_piles(piles=["Deck","DiscardPile","Hand"]):
+	var out_cards=[]
+	for i in piles:
+		for ii in find_child(i).cards:
+			out_cards.append([i,ii])
+	return out_cards
 func _on_texture_button_button_up() -> void:
 	end_the_turn()
 

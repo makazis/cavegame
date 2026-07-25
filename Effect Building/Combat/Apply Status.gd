@@ -1,7 +1,7 @@
 class_name ApplyStatusEffect extends Effect
 @export var target:String="Target"
 @export var amount:int=1;
-@export_enum("Strength","Dexterity","Shackle") var status_effect:String="Strength"
+@export_enum("Strength","Dexterity","Shackle","Burning") var status_effect:String="Strength"
 @export var times:int=1;
 ## Very rarely used, not advised normally
 func run():

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://x08r57e1mwbk"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_ctqgw"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_5ucqb"]
+[ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_hpajf"]
+[ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="4_udc2l"]
+
+[sub_resource type="Resource" id="Resource_hpajf"]
+script = ExtResource("2_hpajf")
+block = 5
+metadata/_custom_type_script = "uid://udmx0spixt2u"
+
+[sub_resource type="Resource" id="Resource_fc8xp"]
+script = ExtResource("4_udc2l")
+metadata/_custom_type_script = "uid://co0nojkhbeoum"
+
+[resource]
+script = ExtResource("2_5ucqb")
+money_cost = 0
+card_name = "Defend"
+card_description = "Gain 5 block"
+effect = SubResource("Resource_hpajf")
+target_criteria = SubResource("Resource_fc8xp")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

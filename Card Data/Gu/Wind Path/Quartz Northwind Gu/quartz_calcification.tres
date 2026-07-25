@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_iy66i"]
 [ext_resource type="Resource" uid="uid://dkkoewv582unq" path="res://Card Data/Gu/Wind Path/Quartz Northwind Gu/quartz_shield.tres" id="2_c3iwm"]
 [ext_resource type="Resource" uid="uid://rjx7xw0uqqev" path="res://Card Data/Gu/Wind Path/Quartz Northwind Gu/quartz_northwind_gu.tres" id="2_oqjlv"]
-[ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Combat/Create_Card.gd" id="3_6rf18"]
+[ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="3_6rf18"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="3_c3iwm"]
 
 [sub_resource type="Resource" id="Resource_sekkn"]

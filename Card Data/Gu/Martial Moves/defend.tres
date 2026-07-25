@@ -16,7 +16,8 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 
 [resource]
 script = ExtResource("1_ussgj")
-pe_cost = 0
+money_cost = null
+time_cost = null
 card_name = "Defend"
 card_description = "Apply 5 block"
 effect = SubResource("Resource_1lner")

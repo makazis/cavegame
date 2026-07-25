@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://n6abwd277h7o"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_d3uk5"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_ciyhi"]
+[ext_resource type="Script" uid="uid://qesbnyyx47gf" path="res://Effect Building/Combat/Dig.gd" id="2_wifan"]
+[ext_resource type="Script" uid="uid://drt5po2eht3pn" path="res://Effect Building/Combat/Deal Damage Static.gd" id="3_7ilbj"]
+[ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="5_7ilbj"]
+
+[sub_resource type="Resource" id="Resource_bjej6"]
+script = ExtResource("2_wifan")
+dig = 6
+metadata/_custom_type_script = "uid://qesbnyyx47gf"
+
+[sub_resource type="Resource" id="Resource_x6wr7"]
+script = ExtResource("3_7ilbj")
+damage = 6
+next_effect = SubResource("Resource_bjej6")
+metadata/_custom_type_script = "uid://drt5po2eht3pn"
+
+[sub_resource type="Resource" id="Resource_3qdme"]
+script = ExtResource("5_7ilbj")
+metadata/_custom_type_script = "uid://co0nojkhbeoum"
+
+[resource]
+script = ExtResource("2_ciyhi")
+money_cost = 0
+card_name = "Shovel Strike"
+card_description = "deal 6 damage
+dig 6"
+effect = SubResource("Resource_x6wr7")
+target_criteria = SubResource("Resource_3qdme")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

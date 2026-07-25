@@ -16,11 +16,12 @@ func _physics_process(delta: float) -> void:
 			var closest_distance=INF
 			var target_creature=null
 			for entity in EffectContext.roles["Fitting Targets"]:
-				entity.target_indicator.color=Color(0.0, 0.416, 0.51, 0.388)
-				var entity_distance=_dragged_card._last_pos.distance_to(entity.center.global_position)
-				if entity_distance<closest_distance:
-					target_creature=entity
-					closest_distance=entity_distance
+				if entity!=null:
+					entity.target_indicator.color=Color(0.0, 0.416, 0.51, 0.388)
+					var entity_distance=_dragged_card._last_pos.distance_to(entity.center.global_position)
+					if entity_distance<closest_distance:
+						target_creature=entity
+						closest_distance=entity_distance
 			target_creature.target_indicator.color=Color(0.832, 0.315, 0.43, 0.463)
 func _handle_dragged_card(card: Card) -> void:
 	if card.card_data.time_cost>CombatData.time or card.card_data.money_cost>CombatData.money or "Unplayable" in card.card_tag_ids: #Card is not to be played
@@ -65,7 +66,7 @@ func _finish_card_drop() -> void:
 		
 		
 		emit_signal("card_played",_dragged_card)
-		
+		EffectContext.roles["PlayedCard"]=_dragged_card
 		CombatData.money-=_dragged_card.card_data.money_cost
 		CombatData.time-=_dragged_card.card_data.time_cost
 		CombatData.root_visual_update.emit()

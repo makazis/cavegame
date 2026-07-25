@@ -28,6 +28,7 @@ func debug_print(text:String):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	CombatData.start_turn.connect(on_turn_start)
+	CombatData.end_game.connect(on_end_game)
 	pass # Replace with function body.
 func on_turn_start(turn:int):
 	variables["Turn"]+=1
@@ -47,9 +48,11 @@ func check_if_combat_ends():
 			friendlies+=1
 		else:
 			enemies+=1
-	if friendlies==0 or enemies==0:
-		
+	if friendlies==0 or enemies==0: #combat ends
 		won=friendlies>0
+		on_end_game()
+func on_end_game():
+	if 1:
 		for entity in all_entities:
 			entity.queue_free()
 		all_entities.clear()

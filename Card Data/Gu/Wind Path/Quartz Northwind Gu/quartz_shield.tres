@@ -24,8 +24,8 @@ metadata/_custom_type_script = "uid://udmx0spixt2u"
 [resource]
 script = ExtResource("2_ch2gs")
 parent_gu = ExtResource("5_lqsrp")
-pe_cost = 0
-c_cost = 0
+money_cost = null
+time_cost = null
 card_name = "Quartz Shield"
 card_description = "End of turn: Gain 5 block"
 effect = SubResource("Resource_70658")

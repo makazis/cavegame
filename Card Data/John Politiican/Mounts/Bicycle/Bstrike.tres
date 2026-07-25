@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cjmothkeskwd7"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_scuw8"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_mbn12"]
+[ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_n0xl4"]
+[ext_resource type="Script" uid="uid://drt5po2eht3pn" path="res://Effect Building/Combat/Deal Damage Static.gd" id="3_63mxd"]
+[ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="3_mbn12"]
+
+[sub_resource type="Resource" id="Resource_63mxd"]
+script = ExtResource("2_n0xl4")
+target = "Caster"
+block = 8
+metadata/_custom_type_script = "uid://udmx0spixt2u"
+
+[sub_resource type="Resource" id="Resource_n0xl4"]
+script = ExtResource("3_63mxd")
+damage = 8
+next_effect = SubResource("Resource_63mxd")
+metadata/_custom_type_script = "uid://drt5po2eht3pn"
+
+[sub_resource type="Resource" id="Resource_lnmnd"]
+script = ExtResource("3_mbn12")
+metadata/_custom_type_script = "uid://co0nojkhbeoum"
+
+[resource]
+script = ExtResource("2_mbn12")
+money_cost = 0
+card_name = "Bycicle Strike"
+card_description = "deal 8 damage, gain 8 block"
+effect = SubResource("Resource_n0xl4")
+target_criteria = SubResource("Resource_lnmnd")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

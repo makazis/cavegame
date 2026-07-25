@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cavc5ala67ft4"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_7rlt2"]
+[ext_resource type="Resource" uid="uid://4k8fw3sxcw7o" path="res://Card Data/John Politiican/Mounts/Bicycle/bmounteffect.tres" id="2_61p7y"]
+[ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="2_k88uw"]
+[ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_n7w57"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="3_61p7y"]
+[ext_resource type="Resource" uid="uid://cjmothkeskwd7" path="res://Card Data/John Politiican/Mounts/Bicycle/Bstrike.tres" id="3_fvnx5"]
+[ext_resource type="Resource" uid="uid://dutxj2w8pnj6w" path="res://Card Data/John Politiican/Mounts/Bicycle/BicycleDismount.tres" id="4_n7w57"]
+[ext_resource type="Script" uid="uid://c5fwf2ionwh12" path="res://Effect Building/Card Tomfoolery/dismounteffect.gd" id="7_eh42v"]
+
+[sub_resource type="Resource" id="Resource_mkp48"]
+script = ExtResource("2_n7w57")
+metadata/_custom_type_script = "uid://0okdd0vdqmcv"
+
+[sub_resource type="Resource" id="Resource_kx0q6"]
+script = ExtResource("2_k88uw")
+created_card_data = ExtResource("4_n7w57")
+place_where = "DismountPile"
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_eh42v"]
+script = ExtResource("2_k88uw")
+created_card_data = ExtResource("3_fvnx5")
+place_where = "Deck"
+next_effect = SubResource("Resource_kx0q6")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_d0ilk"]
+script = ExtResource("2_k88uw")
+created_card_data = ExtResource("2_61p7y")
+place_where = "StartOfTurnGetsPlayed"
+next_effect = SubResource("Resource_eh42v")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_lferd"]
+script = ExtResource("7_eh42v")
+next_effect = SubResource("Resource_d0ilk")
+metadata/_custom_type_script = "uid://c5fwf2ionwh12"
+
+[resource]
+script = ExtResource("3_61p7y")
+money_cost = 0
+card_name = "Bycicle"
+card_description = "Mount. Gain 7 block at the start of each turn. "
+effect = SubResource("Resource_lferd")
+card_tags = Array[ExtResource("1_7rlt2")]([SubResource("Resource_mkp48")])
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

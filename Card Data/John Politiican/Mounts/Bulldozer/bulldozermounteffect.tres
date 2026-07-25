@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cfsn8m87maibi"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_lt1j7"]
+[ext_resource type="Script" uid="uid://bilwm2ine2q0l" path="res://Effect Building/Combat/chronomancyEffect.gd" id="2_27dba"]
+[ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_dge63"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_q0cj8"]
+
+[sub_resource type="Resource" id="Resource_lferd"]
+script = ExtResource("2_27dba")
+time = -2
+metadata/_custom_type_script = "uid://bilwm2ine2q0l"
+
+[sub_resource type="Resource" id="Resource_jjfyl"]
+script = ExtResource("2_dge63")
+target = "Caster"
+block = 20
+next_effect = SubResource("Resource_lferd")
+metadata/_custom_type_script = "uid://udmx0spixt2u"
+
+[resource]
+script = ExtResource("2_q0cj8")
+card_name = "Bulldozer"
+card_description = "gain 20 block
+lose 2 time"
+effect = SubResource("Resource_jjfyl")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

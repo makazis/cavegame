@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://dkl6wx2h2orm5"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_mo8po"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_obim3"]
+[ext_resource type="Script" uid="uid://qesbnyyx47gf" path="res://Effect Building/Combat/Dig.gd" id="2_p37qq"]
+
+[sub_resource type="Resource" id="Resource_lferd"]
+script = ExtResource("2_p37qq")
+dig = 15
+metadata/_custom_type_script = "uid://qesbnyyx47gf"
+
+[resource]
+script = ExtResource("2_obim3")
+money_cost = 0
+time_cost = 2
+card_name = "Dig"
+card_description = "dig 15"
+effect = SubResource("Resource_lferd")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

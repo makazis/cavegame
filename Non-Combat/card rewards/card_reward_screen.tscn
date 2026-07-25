@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bbtuayi2137ai"]
+
+[ext_resource type="Script" uid="uid://ooy8qnaft700" path="res://Non-Combat/card rewards/card_reward_screen.gd" id="1_ri5nf"]
+
+[node name="Card Reward Screen" type="Node2D" unique_id=1909924362]
+script = ExtResource("1_ri5nf")
+
+[node name="Control" type="ColorRect" parent="." unique_id=676285003]
+offset_right = 2560.0
+offset_bottom = 1260.0
+color = Color(0.34579262, 2.4065375e-07, 0.18993363, 1)
+
+[node name="Button" type="Button" parent="." unique_id=2145176162]
+texture_filter = 1
+offset_left = 1283.0
+offset_top = 1077.0
+offset_right = 1324.0
+offset_bottom = 1108.0
+scale = Vector2(2.6078076, 2.1061997)
+text = "Skip"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

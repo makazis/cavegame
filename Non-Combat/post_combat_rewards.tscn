@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c0tru4mouci7u"]
 
 [ext_resource type="PackedScene" uid="uid://bcx7obwqcf8p7" path="res://Non-Combat/singular_reward_post_combat.tscn" id="1_mtrfx"]
+[ext_resource type="Script" uid="uid://dxape0h1oe6tu" path="res://Non-Combat/post_combat_rewards.gd" id="1_qijtu"]
 
 [node name="Node2D" type="Node2D" unique_id=130116637]
+script = ExtResource("1_qijtu")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=745929745]
 z_index = -999
@@ -23,3 +25,12 @@ layout_mode = 2
 
 [node name="Node2D2" parent="VBoxContainer" unique_id=288018123 instance=ExtResource("1_mtrfx")]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=311367609]
+offset_left = 359.0
+offset_top = 653.0
+offset_right = 483.0
+offset_bottom = 754.0
+text = "End"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

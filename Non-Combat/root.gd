@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
 	pass
 
 func show_screen(screen_id,setup_data:Dictionary={}):
+	if screen_id=="GuReward":
+		$"Screens/Card Reward Screen".setup(setup_data["Cards"],setup_data["origin"])
 	$Camera2D.position=screen_coords[screen_id]*Vector2(2560,1260)
 func _on_button_pressed() -> void:
 	show_screen("Combat")
@@ -22,3 +24,5 @@ func _on_button_pressed() -> void:
 
 func _on_combat_ends():
 	show_screen("Reward")
+func add_card_to_deck(card:Card):
+	$CardDeckManager.deck.cards.append(card)

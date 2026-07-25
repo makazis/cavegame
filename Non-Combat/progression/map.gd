@@ -68,6 +68,10 @@ func _ready() -> void:
 									encounters[-1][iii-1+ii][1].append(ii)
 									create_line_between(encounters[-1][iii-1+ii][0].global_position,encounters[-2][ii][0].global_position)
 			for ii in range(enemy_count):
+				for iii in range(len(encounters[-1][ii][1])):
+					encounters[-2][encounters[-1][ii][1][iii]][0].unlocks.append(encounters[-1][ii][0])
+				for iii in range(len(encounters[-1])):
+					encounters[-1][ii][0].siblings.append(encounters[-1][iii][0])
 				var ancestor_colors=[]
 				for iii in range(len(encounters[-1][ii][1])):
 					ancestor_colors.append(encounters[-2][encounters[-1][ii][1][iii]][0].color)

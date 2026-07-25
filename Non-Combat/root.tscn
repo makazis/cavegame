@@ -4,34 +4,32 @@
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="2_hjd13"]
 [ext_resource type="PackedScene" uid="uid://wtjqtvkrv78y" path="res://Combat/root.tscn" id="3_hjd13"]
 [ext_resource type="PackedScene" uid="uid://dc58mwayvn1wr" path="res://Non-Combat/progression/map.tscn" id="5_r07rg"]
+[ext_resource type="Script" uid="uid://bisyk4bowdvsf" path="res://addons/simple_cards/deck/manager/card_deck_manager.gd" id="6_3b8bv"]
+[ext_resource type="Script" uid="uid://c8315v58tr66b" path="res://addons/simple_cards/card/card_resource/card_resource.gd" id="7_7olg0"]
+[ext_resource type="Resource" uid="uid://x08r57e1mwbk" path="res://Card Data/John Politiican/defend.tres" id="8_526gw"]
+[ext_resource type="Resource" uid="uid://dkl6wx2h2orm5" path="res://Card Data/John Politiican/Dig.tres" id="9_mb442"]
 [ext_resource type="PackedScene" uid="uid://c0tru4mouci7u" path="res://Non-Combat/post_combat_rewards.tscn" id="10_5htkc"]
+[ext_resource type="Resource" uid="uid://n6abwd277h7o" path="res://Card Data/John Politiican/ShovelStrike.tres" id="10_38q5j"]
+[ext_resource type="Resource" uid="uid://c1jq44mgb3s2n" path="res://Card Data/John Politiican/Strike.tres" id="11_iwoyh"]
+[ext_resource type="Script" uid="uid://lhb5ry3o8icy" path="res://addons/simple_cards/deck/card_deck.gd" id="12_5l04m"]
+[ext_resource type="PackedScene" uid="uid://bbtuayi2137ai" path="res://Non-Combat/card rewards/card_reward_screen.tscn" id="13_7olg0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font = ExtResource("2_hjd13")
 font_size = 32
 
-[sub_resource type="LabelSettings" id="LabelSettings_r07rg"]
-resource_local_to_scene = true
-font = ExtResource("2_hjd13")
-font_size = 50
-
-[sub_resource type="LabelSettings" id="LabelSettings_yafp7"]
-resource_local_to_scene = true
-font = ExtResource("2_hjd13")
-font_size = 40
-
-[sub_resource type="LabelSettings" id="LabelSettings_u5asa"]
-resource_local_to_scene = true
-font = ExtResource("2_hjd13")
-font_size = 40
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuvhg"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7olg0"]
 resource_local_to_scene = true
 size = Vector2(1232, 1241)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bu2w1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_526gw"]
 resource_local_to_scene = true
 size = Vector2(1232, 956)
+
+[sub_resource type="Resource" id="Resource_g4v7s"]
+script = ExtResource("12_5l04m")
+cards = Array[ExtResource("7_7olg0")]([ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("9_mb442"), ExtResource("10_38q5j"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh")])
+metadata/_custom_type_script = "uid://lhb5ry3o8icy"
 
 [node name="Root" type="Node2D" unique_id=1285266550]
 script = ExtResource("1_igkdj")
@@ -56,26 +54,29 @@ label_settings = SubResource("LabelSettings_g4v7s")
 
 [node name="Screens" type="Node2D" parent="." unique_id=2135864765]
 
+[node name="Card Reward Screen" parent="Screens" unique_id=1909924362 instance=ExtResource("13_7olg0")]
+position = Vector2(3840, -1890)
+
 [node name="Root" parent="Screens" unique_id=1328499140 instance=ExtResource("3_hjd13")]
 position = Vector2(1280, -630)
 
-[node name="MaxConcentration" parent="Screens/Root/Energy/Conc" parent_id_path=PackedInt32Array(1328499140, 447967751) index="0" unique_id=484301506]
-label_settings = SubResource("LabelSettings_r07rg")
+[node name="Deck" parent="Screens/Root" index="0" unique_id=1917143974]
+offset_left = 2334.0
+offset_top = 1495.0
+offset_right = 2374.0
+offset_bottom = 1535.0
 
-[node name="Concentration" parent="Screens/Root/Energy/Conc" parent_id_path=PackedInt32Array(1328499140, 447967751) index="1" unique_id=1160746985]
-label_settings = SubResource("LabelSettings_r07rg")
-
-[node name="MaxConcentration" parent="Screens/Root/Energy/Essence" parent_id_path=PackedInt32Array(1328499140, 2109257457) index="0" unique_id=364109030]
-label_settings = SubResource("LabelSettings_yafp7")
-
-[node name="Concentration" parent="Screens/Root/Energy/Essence" parent_id_path=PackedInt32Array(1328499140, 2109257457) index="1" unique_id=1799220836]
-label_settings = SubResource("LabelSettings_u5asa")
+[node name="DiscardPile" parent="Screens/Root" index="2" unique_id=180910201]
+offset_left = 2264.0
+offset_top = 1406.0
+offset_right = 2304.0
+offset_bottom = 1446.0
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea4" parent_id_path=PackedInt32Array(1328499140, 1743876184) index="0" unique_id=1810447271]
-shape = SubResource("RectangleShape2D_fuvhg")
+shape = SubResource("RectangleShape2D_7olg0")
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea3" parent_id_path=PackedInt32Array(1328499140, 220950517) index="0" unique_id=30001419]
-shape = SubResource("RectangleShape2D_bu2w1")
+shape = SubResource("RectangleShape2D_526gw")
 
 [node name="PostCombatRewards" parent="Screens" unique_id=130116637 instance=ExtResource("10_5htkc")]
 position = Vector2(3840, -630)
@@ -83,16 +84,12 @@ position = Vector2(3840, -630)
 [node name="Map" parent="Screens" unique_id=989293573 instance=ExtResource("5_r07rg")]
 position = Vector2(-1280, -630)
 
-[node name="Button" type="Button" parent="." unique_id=1197210625]
-offset_left = 952.0
-offset_top = -253.0
-offset_right = 1043.0
-offset_bottom = -222.0
-text = "Play Battle"
-
 [node name="Marker2D" type="Marker2D" parent="." unique_id=10343137]
 position = Vector2(1665, 0)
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="CardDeckManager" type="Node" parent="." unique_id=980548795]
+script = ExtResource("6_3b8bv")
+deck = SubResource("Resource_g4v7s")
+metadata/_custom_type_script = "uid://bisyk4bowdvsf"
 
 [editable path="Screens/Root"]

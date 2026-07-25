@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dfkcqc1pawpko" path="res://Creature Data/creature.gd" id="1_kxnm2"]
 [ext_resource type="Script" uid="uid://cs1e2lwpafbvf" path="res://Creature Data/creature_layout.gd" id="2_p1l1x"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="2_wfiiy"]
-[ext_resource type="Texture2D" uid="uid://b3j11g63dl0i1" path="res://Assets/Icons/ShieldIcon.png" id="4_p1l1x"]
+[ext_resource type="Texture2D" uid="uid://bremexj2r3iq4" path="res://IMG_2347.png" id="4_p1l1x"]
 
 [sub_resource type="Resource" id="Resource_ihyaa"]
 script = ExtResource("2_p1l1x")
@@ -39,7 +39,7 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_ihyaa"]
 resource_local_to_scene = true
 font = ExtResource("2_wfiiy")
-font_size = 140
+font_size = 350
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
@@ -89,17 +89,16 @@ text = "70/70"
 label_settings = SubResource("LabelSettings_6tlxp")
 
 [node name="ShieldIcon" type="Sprite2D" parent="S" unique_id=1433389936]
-visible = false
 z_index = 10
-position = Vector2(1, 252)
-scale = Vector2(0.10409253, 0.11602569)
+position = Vector2(-4, 257)
+scale = Vector2(0.04310946, 0.048051525)
 texture = ExtResource("4_p1l1x")
 
 [node name="ShieldLabel" type="Label" parent="S/ShieldIcon" unique_id=1287278747]
-offset_left = -220.95724
-offset_top = -120.66293
-offset_right = 201.74356
-offset_bottom = 57.337067
+offset_left = -510.3288
+offset_top = -332.97595
+offset_right = 566.9389
+offset_bottom = 172.02405
 text = "2"
 label_settings = SubResource("LabelSettings_ihyaa")
 horizontal_alignment = 1

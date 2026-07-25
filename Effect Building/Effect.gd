@@ -3,8 +3,9 @@ class_name Effect extends Resource
 
 func run():
 	pass
-func process():
-	run()
+func process(depth=0):
+	EffectContext.debug_print("depth: "+str(depth))
+	await run()
 	
 	if next_effect!=null:
-		next_effect.process()
+		await next_effect.process(depth+1)

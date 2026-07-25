@@ -220,14 +220,18 @@ position = Vector2(1880, 602)
 position = Vector2(-459, -326)
 
 [node name="StartOfTurnGetsPlayed" type="Panel" parent="." unique_id=1248427174]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 2085.0
+offset_top = 1473.0
+offset_right = 2125.0
+offset_bottom = 1513.0
 script = ExtResource("17_b47kv")
 metadata/_custom_type_script = "uid://d2l8uaoel5whd"
 
 [node name="DismountPile" type="Panel" parent="." unique_id=115058703]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 2070.0
+offset_top = 1462.0
+offset_right = 2110.0
+offset_bottom = 1502.0
 script = ExtResource("17_b47kv")
 metadata/_custom_type_script = "uid://d2l8uaoel5whd"
 

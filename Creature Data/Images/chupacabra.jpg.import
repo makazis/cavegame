@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmw8g5ig86jth"
-path="res://.godot/imported/IMG_2338.png-1b415f791249cba993da2f711efccb34.ctex"
+uid="uid://mfwbdfxfidgk"
+path="res://.godot/imported/chupacabra.jpg-4a9965f6d8bd8d00ee16a97cd2fdefc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://IMG_2338.png"
-dest_files=["res://.godot/imported/IMG_2338.png-1b415f791249cba993da2f711efccb34.ctex"]
+source_file="res://Creature Data/Images/chupacabra.jpg"
+dest_files=["res://.godot/imported/chupacabra.jpg-4a9965f6d8bd8d00ee16a97cd2fdefc8.ctex"]
 
 [params]
 

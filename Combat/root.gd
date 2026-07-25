@@ -6,7 +6,8 @@ var drawn_cards=false
 var creature_load_reference={
 	"Fang Yuan":preload("res://Creature Data/Friends/john_politician.tres"),
 	"Spectral Dog":preload("res://Creature Data/Enemies/Ethereal Dog.tres"),
-	"Bigfoot":preload("res://Creature Data/Enemies/bigfootprobably.tres")
+	"Bigfoot":preload("res://Creature Data/Enemies/bigfootprobably.tres"),
+	"Chupacabra":preload("res://Creature Data/Enemies/Chupacabra.tres"),
 }
 func _ready() -> void:
 	CombatData.root_visual_update.connect(visual_update)
@@ -228,7 +229,9 @@ func _process(delta: float) -> void:
 				entity.update_target_line()
 	
 	last_mouse_pos=new_mouse_pos
-	
+	#if is_select_sequence_open:
+		#for card:Card in $hand.cards:
+			
 func _on_drag_area_mouse_entered() -> void:
 	mouse_over_friendly_area=true
 	
@@ -244,3 +247,22 @@ func _on_drag_area2_mouse_entered() -> void:
 func _on_drag_area2_2_mouse_exited() -> void:
 	mouse_over_unfriendly_area=false
 	dragging_unfriendly_area=false
+
+var cards_selected=[]
+var is_select_sequence_open=false
+func start_card_select_sequence(_cards_selected=1,words_at_top="Select a card to discard"):
+	if len($Hand.cards)<_cards_selected:
+		for card in $Hand.cards:
+			cards_selected.append(card)
+		$Hand.cards.clear()
+		return
+	$Control.position=Vector2(0,0)
+	is_select_sequence_open=true
+	await button_resolves
+	is_select_sequence_open=false
+	$Control.position=Vector2(0,-1260)
+	return []
+
+signal button_resolves()
+func _on_button_pressed() -> void:
+	button_resolves.emit()

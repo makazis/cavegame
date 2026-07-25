@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dxhjs4qacx8ds"]
+[gd_scene format=3 uid="uid://d0g8pj7ja67k6"]
 
 [ext_resource type="Script" uid="uid://wnvlke0vo18j" path="res://Non-Combat/root.gd" id="1_igkdj"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="2_hjd13"]
@@ -13,22 +13,23 @@
 [ext_resource type="Resource" uid="uid://c1jq44mgb3s2n" path="res://Card Data/John Politiican/Strike.tres" id="11_iwoyh"]
 [ext_resource type="Script" uid="uid://lhb5ry3o8icy" path="res://addons/simple_cards/deck/card_deck.gd" id="12_5l04m"]
 [ext_resource type="PackedScene" uid="uid://bbtuayi2137ai" path="res://Non-Combat/card rewards/card_reward_screen.tscn" id="13_7olg0"]
+[ext_resource type="Resource" uid="uid://clm8s8vofvwy6" path="res://Card Data/John Politiican/Test/test.tres" id="13_526gw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font = ExtResource("2_hjd13")
 font_size = 32
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7olg0"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb442"]
 resource_local_to_scene = true
 size = Vector2(1232, 1241)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_526gw"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38q5j"]
 resource_local_to_scene = true
 size = Vector2(1232, 956)
 
 [sub_resource type="Resource" id="Resource_g4v7s"]
 script = ExtResource("12_5l04m")
-cards = Array[ExtResource("7_7olg0")]([ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("9_mb442"), ExtResource("10_38q5j"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh")])
+cards = Array[ExtResource("7_7olg0")]([ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("9_mb442"), ExtResource("10_38q5j"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("13_526gw")])
 metadata/_custom_type_script = "uid://lhb5ry3o8icy"
 
 [node name="Root" type="Node2D" unique_id=1285266550]
@@ -73,10 +74,10 @@ offset_right = 2304.0
 offset_bottom = 1446.0
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea4" parent_id_path=PackedInt32Array(1328499140, 1743876184) index="0" unique_id=1810447271]
-shape = SubResource("RectangleShape2D_7olg0")
+shape = SubResource("RectangleShape2D_mb442")
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea3" parent_id_path=PackedInt32Array(1328499140, 220950517) index="0" unique_id=30001419]
-shape = SubResource("RectangleShape2D_526gw")
+shape = SubResource("RectangleShape2D_38q5j")
 
 [node name="PostCombatRewards" parent="Screens" unique_id=130116637 instance=ExtResource("10_5htkc")]
 position = Vector2(3840, -630)

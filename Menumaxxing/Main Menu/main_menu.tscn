@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cvcbjfr4xehs6"]
+
+[ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="1_mf5ls"]
+[ext_resource type="Script" uid="uid://c1ifwqb76vqf2" path="res://Menumaxxing/Main Menu/main_menu.gd" id="1_py06a"]
+
+[sub_resource type="Theme" id="Theme_yf5fn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1_mf5ls")
+font_size = 200
+
+[node name="Main Menu" type="Node2D" unique_id=1847527682]
+script = ExtResource("1_py06a")
+
+[node name="Button" type="Button" parent="." unique_id=1108694180]
+offset_left = 1032.0
+offset_top = 794.0
+offset_right = 1270.0
+offset_bottom = 980.0
+theme = SubResource("Theme_yf5fn")
+text = "Play Game
+"
+
+[node name="Label" type="Label" parent="." unique_id=2070124706]
+offset_left = 884.0
+offset_top = 231.0
+offset_right = 1412.0
+offset_bottom = 504.0
+text = "HOLE"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

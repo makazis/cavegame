@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://fwjl2xhfub27"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_mnlnh"]
+[ext_resource type="Resource" uid="uid://hq3dk0trd4vx" path="res://Card Data/John Politiican/Crafting/Killdozer/Killdozer Mechanics/killdozerSOT.tres" id="2_6ovwn"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_26neo"]
+[ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="3_ct0em"]
+[ext_resource type="Script" uid="uid://c5fwf2ionwh12" path="res://Effect Building/Card Tomfoolery/dismounteffect.gd" id="4_anev3"]
+
+[sub_resource type="Resource" id="Resource_qm0tu"]
+script = ExtResource("3_ct0em")
+created_card_data = ExtResource("2_6ovwn")
+place_where = "StartOfTurnGetsPlayed"
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_eh42v"]
+script = ExtResource("4_anev3")
+next_effect = SubResource("Resource_qm0tu")
+metadata/_custom_type_script = "uid://c5fwf2ionwh12"
+
+[resource]
+script = ExtResource("2_26neo")
+money_cost = 0
+time_cost = 4
+card_name = "Killdozer"
+card_description = "Mount. At the start of each turn, gain 40 block and lose 2 time."
+effect = SubResource("Resource_eh42v")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

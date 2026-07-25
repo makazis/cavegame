@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://dfx2tj6lbohss"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_b8xhg"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_6fpbm"]
+[ext_resource type="Script" uid="uid://c05j30rnbu6y7" path="res://Effect Building/Combat/Apply Status.gd" id="2_grpm2"]
+[ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="4_jlu31"]
+
+[sub_resource type="Resource" id="Resource_grpm2"]
+script = ExtResource("2_grpm2")
+amount = 20
+status_effect = "Burning"
+metadata/_custom_type_script = "uid://c05j30rnbu6y7"
+
+[sub_resource type="Resource" id="Resource_jlu31"]
+script = ExtResource("4_jlu31")
+metadata/_custom_type_script = "uid://co0nojkhbeoum"
+
+[resource]
+script = ExtResource("2_6fpbm")
+money_cost = 0
+card_name = "Wielder"
+card_description = "Apply 20 burning"
+effect = SubResource("Resource_grpm2")
+target_criteria = SubResource("Resource_jlu31")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

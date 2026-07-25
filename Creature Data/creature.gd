@@ -35,8 +35,11 @@ func on_end_turn(turn_index:int):
 
 func individual_start_turn(turn_index:int=0):
 	var needs_to_update_status_effects=false
+	if "Burning" in data.statuses:
+		data.hp-=data.statuses["Burning"]
+		data.statuses["Burning"]=int(data.statuses["Burning"]/2)
+		needs_to_update_status_effects=true
 	if data.team=="Friendly":
-		
 		if !data.main_character:
 			var valid_targets=[]
 			for entity in EffectContext.all_entities:
@@ -167,6 +170,7 @@ func execute_attack():
 			iteratable_targets=[self]
 		else:
 			iteratable_targets=[target]
+		EffectContext.roles["ECaster"]=[self]
 		for i in action_iter.times:
 			if action_iter.type=="Dig":
 				if data.name=="Intern":
@@ -233,6 +237,8 @@ func _ready() -> void:
 func visual_update():
 	$S/ProgressBar.value=float(data.hp)/max_hp*100.
 	$S/ProgressBar/Label.text="%d/%d" % [data.hp,max_hp]
+	if data.main_character:
+		CombatData.player_hp=data.hp
 	if data.block>0:
 		$S/ProgressBar.texture_progress.gradient.set_color(0,Color(0.275, 0.275, 0.275, 1.0))
 		$S/ProgressBar.texture_progress.gradient.set_color(1,Color(0.561, 0.561, 0.561, 1.0))

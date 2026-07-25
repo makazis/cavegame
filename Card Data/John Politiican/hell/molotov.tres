@@ -6,13 +6,13 @@
 
 [sub_resource type="Resource" id="Resource_1ne7l"]
 script = ExtResource("2_1ne7l")
-amount = 4
+amount = 12
 status_effect = "Burning"
 metadata/_custom_type_script = "uid://c05j30rnbu6y7"
 
 [resource]
 script = ExtResource("2_sj5es")
 card_name = "Molotov"
-card_description = "Apply 4 burning"
+card_description = "Apply 12 burning"
 effect = SubResource("Resource_1ne7l")
 metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

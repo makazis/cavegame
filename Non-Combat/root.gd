@@ -12,7 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$Camera2D/Panel/Label.text="HP: "+str(CombatData.player_hp)+"/70"
 var held_data={}
 func show_screen(screen_id,setup_data:Dictionary={}):
 	if screen_id=="GuReward":

@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Creature" format=3 uid="uid://yvmr1q2c42ns"]
+
+[ext_resource type="Script" uid="uid://cs1e2lwpafbvf" path="res://Creature Data/creature_layout.gd" id="1_1fqgr"]
+[ext_resource type="Script" uid="uid://b1220yr12wl0u" path="res://Creature Data/Attack_Pattern/EnemyAttackMove.gd" id="1_7pe36"]
+[ext_resource type="Script" uid="uid://cxk8nxq7mevbi" path="res://Creature Data/Attack_Pattern/new_script.gd" id="2_055il"]
+[ext_resource type="Script" uid="uid://crwrqd6c7y8wu" path="res://Creature Data/Attack_Pattern/Attack_Pattern.gd" id="3_3f0rl"]
+[ext_resource type="Texture2D" uid="uid://dmgrgeis470j7" path="res://Creature Data/Images/chupacabra.png" id="4_ayucu"]
+
+[sub_resource type="Resource" id="Resource_ayucu"]
+script = ExtResource("2_055il")
+type = "Block"
+amount = 6
+metadata/_custom_type_script = "uid://cxk8nxq7mevbi"
+
+[sub_resource type="Resource" id="Resource_g88jg"]
+script = ExtResource("2_055il")
+type = "Buff"
+amount = 4
+metadata/_custom_type_script = "uid://cxk8nxq7mevbi"
+
+[sub_resource type="Resource" id="Resource_43mom"]
+script = ExtResource("1_7pe36")
+actions = Array[ExtResource("2_055il")]([SubResource("Resource_ayucu"), SubResource("Resource_g88jg")])
+metadata/_custom_type_script = "uid://b1220yr12wl0u"
+
+[sub_resource type="Resource" id="Resource_vp7lu"]
+script = ExtResource("2_055il")
+type = "Attack"
+amount = 6
+metadata/_custom_type_script = "uid://cxk8nxq7mevbi"
+
+[sub_resource type="Resource" id="Resource_7pe36"]
+script = ExtResource("2_055il")
+type = "Buff"
+amount = 4
+status_type = "Dexterity"
+target_perhaps = "ECaster"
+metadata/_custom_type_script = "uid://cxk8nxq7mevbi"
+
+[sub_resource type="Resource" id="Resource_fqlll"]
+script = ExtResource("1_7pe36")
+actions = Array[ExtResource("2_055il")]([SubResource("Resource_vp7lu"), SubResource("Resource_7pe36")])
+metadata/_custom_type_script = "uid://b1220yr12wl0u"
+
+[sub_resource type="Resource" id="Resource_1fqgr"]
+script = ExtResource("3_3f0rl")
+PatternType = "Random"
+attacks = Array[ExtResource("1_7pe36")]([SubResource("Resource_43mom"), SubResource("Resource_fqlll")])
+metadata/_custom_type_script = "uid://crwrqd6c7y8wu"
+
+[resource]
+script = ExtResource("1_1fqgr")
+name = "Chupacabra"
+hp = 35
+image = ExtResource("4_ayucu")
+team = "Enemy"
+attack_pattern = SubResource("Resource_1fqgr")
+metadata/_custom_type_script = "uid://cs1e2lwpafbvf"

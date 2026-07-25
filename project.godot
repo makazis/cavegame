@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cavegame"
-run/main_scene="uid://dxhjs4qacx8ds"
+run/main_scene="uid://cvcbjfr4xehs6"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -36,9 +36,22 @@ enabled=PackedStringArray("res://addons/simple_cards/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://Assets/": "orange",
+"res://Card Data/": "yellow",
 "res://Card Data/John Politiican/": "yellow",
 "res://Card Data/John Politiican/buy/": "green",
-"res://Card Data/John Politiican/hell/": "orange"
+"res://Card Data/John Politiican/hell/": "orange",
+"res://Combat/": "gray",
+"res://Creature Data/": "green",
+"res://Effect Building/": "teal",
+"res://Effect Building/Card Tomfoolery/": "blue",
+"res://Effect Building/Combat/": "orange",
+"res://Effect Building/Logic Oriented/": "green",
+"res://Effect Building/Target_Handling/": "pink",
+"res://Menumaxxing/": "blue",
+"res://Non-Combat/": "purple",
+"res://Shitposting/": "pink",
+"res://addons/": "red"
 }
 
 [input]

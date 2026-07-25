@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bxkw34pksdtpu" path="res://Creature Data/Other/attack_indicator.gd" id="1_35lex"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="1_d1j6d"]
-[ext_resource type="Texture2D" uid="uid://iiu0hd2ol35a" path="res://IMG_2348.png" id="2_35lex"]
-[ext_resource type="Texture2D" uid="uid://bremexj2r3iq4" path="res://IMG_2347.png" id="3_35lex"]
+[ext_resource type="Texture2D" uid="uid://iiu0hd2ol35a" path="res://Assets/IMG_2348.png" id="2_35lex"]
+[ext_resource type="Texture2D" uid="uid://bremexj2r3iq4" path="res://Assets/IMG_2347.png" id="3_35lex"]
 [ext_resource type="Texture2D" uid="uid://dkorpchsjpt0a" path="res://Assets/Icons/CurseIcon.png" id="4_35lex"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ub26"]

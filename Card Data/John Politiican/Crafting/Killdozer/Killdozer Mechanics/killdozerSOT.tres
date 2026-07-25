@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://hq3dk0trd4vx"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_vpcv2"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_lbwav"]
+[ext_resource type="Script" uid="uid://bilwm2ine2q0l" path="res://Effect Building/Combat/chronomancyEffect.gd" id="2_rs2h5"]
+[ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="3_040am"]
+
+[sub_resource type="Resource" id="Resource_040am"]
+script = ExtResource("2_rs2h5")
+time = -2
+metadata/_custom_type_script = "uid://bilwm2ine2q0l"
+
+[sub_resource type="Resource" id="Resource_rs2h5"]
+script = ExtResource("3_040am")
+target = "Caster"
+block = 40
+next_effect = SubResource("Resource_040am")
+metadata/_custom_type_script = "uid://udmx0spixt2u"
+
+[resource]
+script = ExtResource("2_lbwav")
+money_cost = 0
+time_cost = 0
+card_name = "Rampage of Steel"
+card_description = "Gain 40 block, lose 2 time"
+effect = SubResource("Resource_rs2h5")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

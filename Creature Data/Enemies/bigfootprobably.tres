@@ -66,4 +66,5 @@ hp = 60
 image = ExtResource("4_8xhi0")
 team = "Enemy"
 attack_pattern = SubResource("Resource_u66bi")
+enemy_weight = 4
 metadata/_custom_type_script = "uid://cs1e2lwpafbvf"

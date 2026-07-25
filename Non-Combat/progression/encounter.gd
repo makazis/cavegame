@@ -38,13 +38,24 @@ func _process(delta: float) -> void:
 	else:
 		modulate=Color(0.5, 0.5, 0.5, 1.0)	
 
-
+var enemy_costs={
+	"Bigfoot":4,
+	"Chupacabra":3,
+}
+var enemies=enemy_costs.keys()
 func _on_button_pressed() -> void:
 	if unlocked:
 		CombatData.dig=40+pow(1+depth/30.,6)
 		get_parent().get_parent().dragging_map=false
 		generate_rewards()
-		get_parent().get_parent().get_parent().get_parent().show_screen("Combat",{"Enemies":["Bigfoot"]})
+		var enemies_you_have_to_fight=[]
+		var enemy_pool=4+depth/2
+		for i in range(100): #rolls
+			var random_monster=enemies.pick_random()
+			if enemy_costs[random_monster]<=enemy_pool:
+				enemy_pool-=enemy_costs[random_monster]
+				enemies_you_have_to_fight.append(random_monster)
+		get_parent().get_parent().get_parent().get_parent().show_screen("Combat",{"Enemies":enemies_you_have_to_fight})
 		get_parent().get_parent().get_parent().get_parent().held_data=rewards
 
 		for i in unlocks:

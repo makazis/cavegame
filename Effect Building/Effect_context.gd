@@ -12,6 +12,9 @@ var roles={
 var variables={
 	"Turn":0
 }; #This will be a dictionary with game related variables. I will add some other game-related variables in here later on. 
+var persistent_variables={ #I will make a card that has to be played 10 times, and does nothing, and on 10th time it transforms into the meaning of life, which makes you happy. which is a status that does nothing. 
+
+}
 #An example would be 'Attacker' being assigned to the creature attacking a different creature.
 #or perhaps 'Defender' being assigned to the creature who is being attacked via the attack. This does mean that if there are multiple 
 
@@ -50,6 +53,10 @@ func check_if_combat_ends():
 			enemies+=1
 	if friendlies==0 or enemies==0: #combat ends
 		won=friendlies>0
+		if !won:
+			await get_tree().process_frame
+			get_tree().change_scene_to_file("res://Menumaxxing/Main Menu/main_menu.tscn")
+			return
 		on_end_game()
 func on_end_game():
 	if 1:

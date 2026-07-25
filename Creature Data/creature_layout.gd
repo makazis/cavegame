@@ -13,5 +13,6 @@ class_name Creature extends Resource
 @export var attack_pattern:AttackPattern
 @export var main_character:bool=false
 
+@export var enemy_weight:int=3
 
 var statuses={}

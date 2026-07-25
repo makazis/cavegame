@@ -8,10 +8,13 @@ func _ready() -> void:
 var card_s=[]
 var mtype=""
 func setup(data):
+	if common_cards==null:
+		return
 	mtype=data["Type"]
 	if data["Type"]=="Card Reward":
 		var chosen_card=null
-		while len(card_s)<3:
+		var t=0
+		while len(card_s)<3 and t<100:
 			var roll=randf()
 			if roll<0.03:
 				chosen_card=rare_cards.pick_random()

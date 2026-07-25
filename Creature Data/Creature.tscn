@@ -64,6 +64,7 @@ region_rect = Rect2(0, 0, 256, 256)
 offset_top = 276.0
 offset_right = 280.0
 offset_bottom = 373.0
+mouse_behavior_recursive = 1
 columns = 5
 
 [node name="ColorRect" type="ColorRect" parent="S" unique_id=1853776915]
@@ -71,6 +72,7 @@ visible = false
 z_index = 10
 offset_right = 256.0
 offset_bottom = 256.0
+mouse_filter = 1
 color = Color(0, 0.41568628, 0.50980395, 0.3882353)
 
 [node name="ProgressBar" type="TextureProgressBar" parent="S" unique_id=328636248]

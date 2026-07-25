@@ -6,7 +6,6 @@
 
 [sub_resource type="Resource" id="Resource_7olg0"]
 script = ExtResource("2_jc3vh")
-place_where = "Deck"
 metadata/_custom_type_script = "uid://bo4sgrjb1j17h"
 
 [resource]

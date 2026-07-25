@@ -127,6 +127,7 @@ func _init(card_resource: CardResource = null) -> void:
 	if Engine.is_editor_hint(): return
 	name = "card_" + str(CG.card_index)
 	CG.card_index += 1
+	card_clicked.connect(CombatData.on_card_clicked)
 	if card_resource:
 		card_data = card_resource
 		for tag in card_data.card_tags:

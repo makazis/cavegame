@@ -12,8 +12,12 @@ config_version=5
 
 config/name="Cavegame"
 run/main_scene="uid://cvcbjfr4xehs6"
+run/enable_alt_space_menu=true
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/show_image=false
+boot_splash/image="uid://dq10s2t53wf8q"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=10
 
 [autoload]
 

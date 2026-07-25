@@ -25,7 +25,7 @@ var uf_space_x=0
 var uf_space_y=0 
 var uf_y_window_size=0
 ##These six values denote where will new entities be placed. 
-
+@onready var og_pos=$ColorRect/Img2364.position
 func setup(_enemies):
 	var main_character=creature.instantiate()
 	main_character.data=creature_load_reference["Fang Yuan"].duplicate() # use when creating characters
@@ -71,8 +71,8 @@ func summon_entity(_creature:Creature_Node):
 			f_y_window_size=256*_creature.data.display_size+200
 			if t1:
 				f_space_y-=f_y_window_size
-		_creature.position.x=f_space_x+random_x_bonus
-		_creature.position.y=f_space_y+random_y_bonus
+		_creature.position.x=1124-(f_space_x+random_x_bonus+256*_creature.data.display_size)
+		_creature.position.y=f_space_y+random_y_bonus-100
 		f_space_x+=_creature.data.display_size*256+random_x_bonus
 		$"Friendly Characters/Friends".add_child(_creature)
 	else:
@@ -227,7 +227,9 @@ func _process(delta: float) -> void:
 			$"UnFriendly Characters".position.y=clamp($"UnFriendly Characters".position.y+mouse_rel[1]*2,602,602-uf_space_y)
 			for entity in EffectContext.all_entities:
 				entity.update_target_line()
-	
+	var xdrag=sin((1280-new_mouse_pos.x)/1280.*PI)*30
+	var ydrag=sin((630-new_mouse_pos.y)/630.*PI)*20
+	$ColorRect/Img2364.position=og_pos+Vector2(xdrag,ydrag)
 	last_mouse_pos=new_mouse_pos
 	#if is_select_sequence_open:
 		#for card:Card in $hand.cards:

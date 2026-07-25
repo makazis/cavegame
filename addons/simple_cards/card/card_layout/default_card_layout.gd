@@ -30,5 +30,9 @@ func _update_display() -> void:
 			$"SubViewport/DefaultCardSprite/Two Money".visible=true
 		if data.money_cost==1:
 			$"SubViewport/DefaultCardSprite/One Money".visible=true
-		
+		if data.money_cost>=5:
+			$"SubViewport/DefaultCardSprite/Five Money".visible=true
+			if data.money_cost>5:
+				$SubViewport/DefaultCardSprite/Label3.visible=true
+				$SubViewport/DefaultCardSprite/Label3.text=CombatData.standart_big_number(data.money_cost)
 	display_updated.emit()

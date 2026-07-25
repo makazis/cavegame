@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://c152kacxc0i10"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_5s3t0"]
+[ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_c84a7"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_weahh"]
+[ext_resource type="Resource" uid="uid://c85ybiwqjceow" path="res://Card Data/John Politiican/buy/hematogen.tres" id="3_2xg3p"]
+[ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="4_gs6us"]
+[ext_resource type="Script" uid="uid://bl1kp2n20pfe1" path="res://Effect Building/Logic Oriented/times.gd" id="5_4guvo"]
+
+[sub_resource type="Resource" id="Resource_6tgul"]
+script = ExtResource("2_c84a7")
+metadata/_custom_type_script = "uid://0okdd0vdqmcv"
+
+[sub_resource type="Resource" id="Resource_rkeeh"]
+script = ExtResource("4_gs6us")
+created_card_data = ExtResource("3_2xg3p")
+place_where = "Deck"
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_qo0gw"]
+script = ExtResource("5_4guvo")
+execute = SubResource("Resource_rkeeh")
+times = 3
+metadata/_custom_type_script = "uid://bl1kp2n20pfe1"
+
+[resource]
+script = ExtResource("2_weahh")
+money_cost = 2
+time_cost = 0
+card_name = "Buy Hematogens"
+card_description = "buy 3 hematogens, shuffle them into your deck"
+effect = SubResource("Resource_qo0gw")
+card_tags = Array[ExtResource("1_5s3t0")]([SubResource("Resource_6tgul")])
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

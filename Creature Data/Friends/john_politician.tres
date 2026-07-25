@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Creature" format=3 uid="uid://4ovcdwr6i0p"]
+
+[ext_resource type="Script" uid="uid://cs1e2lwpafbvf" path="res://Creature Data/creature_layout.gd" id="1_nefnx"]
+[ext_resource type="Texture2D" uid="uid://cvfog82ddkjiy" path="res://Assets/low_res_lad.png" id="1_prb7w"]
+
+[resource]
+script = ExtResource("1_nefnx")
+name = "John Politician"
+display_size = 2
+hp = 70
+image = ExtResource("1_prb7w")
+team = "Friendly"
+main_character = true
+metadata/_custom_type_script = "uid://cs1e2lwpafbvf"

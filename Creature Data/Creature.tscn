@@ -50,14 +50,15 @@ data = SubResource("Resource_ihyaa")
 [node name="Line2D" type="Line2D" parent="." unique_id=1442317174]
 z_index = -20
 position = Vector2(127, 121)
-points = PackedVector2Array(0, 0, -13, 3)
+points = PackedVector2Array(0, 0, 0, 0)
 width = 20.0
 gradient = SubResource("Gradient_muryh")
 texture_mode = 1
 
 [node name="S" type="Sprite2D" parent="." unique_id=132266911]
 centered = false
-region_rect = Rect2(0, 0, 248, 236)
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
 
 [node name="GridContainer" type="GridContainer" parent="S" unique_id=868089725]
 offset_top = 276.0

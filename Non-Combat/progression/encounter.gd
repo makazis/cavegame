@@ -3,8 +3,9 @@ extends Node2D
 @export_enum("Enemy","Elite","Random","Rest","Resource","Graph??") var type="Enemy"
 var unlocked=false
 var unlocks=[]
-var siblings=[]
+var siblings=[self]
 var color=0
+var depth=0
 func setup(_type):
 	type=_type
 	if _type=="Enemy":
@@ -40,8 +41,24 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	if unlocked:
-		get_parent().get_parent().get_parent().get_parent().show_screen("Combat")
+		CombatData.dig=40+pow(1+depth/30.,6)
+		get_parent().get_parent().dragging_map=false
+		generate_rewards()
+		get_parent().get_parent().get_parent().get_parent().show_screen("Combat",{"Enemies":["Bigfoot"]})
+		get_parent().get_parent().get_parent().get_parent().held_data=rewards
+
 		for i in unlocks:
 			i.unlocked=true
 		for i in siblings:
 			i.unlocked=false
+var rewards=[]
+func generate_rewards():
+	rewards.clear()
+	if type=="Enemy":
+		rewards.append({"Type":"Card Reward"})
+		#rewards.append({"Type":"Gold","Amount":depth+5+randi_range(1,randi_range(1,randi_range(1,100)))})
+	if type=="Elite":
+		rewards.append({"Type":"Card Reward"})
+		rewards.append({"Type":"Card Reward"})
+		#rewards.append({"Type":"Gold","Amount":depth+5+randi_range(50,randi_range(50,randi_range(1,400)))})
+	

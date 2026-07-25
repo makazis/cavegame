@@ -1,6 +1,6 @@
 extends Node
 
-var money=7
+var money=0
 var max_money=7
 var time=4
 var max_time=4

@@ -68,6 +68,7 @@ func _ready() -> void:
 									encounters[-1][iii-1+ii][1].append(ii)
 									create_line_between(encounters[-1][iii-1+ii][0].global_position,encounters[-2][ii][0].global_position)
 			for ii in range(enemy_count):
+				encounters[-1][ii][0].depth=i
 				for iii in range(len(encounters[-1][ii][1])):
 					encounters[-2][encounters[-1][ii][1][iii]][0].unlocks.append(encounters[-1][ii][0])
 				for iii in range(len(encounters[-1])):
@@ -93,6 +94,7 @@ func _ready() -> void:
 					continue
 				encounters[-1][ii][0].setup("Random")
 				
+				
 					
 			last_enemy_count=enemy_count
 
@@ -111,14 +113,25 @@ var mouse_pos=Vector2(0,0)
 var lmp=Vector2(0,0)
 
 func _process(delta: float) -> void:
-	mouse_pos=get_viewport().get_mouse_position()
+	mouse_pos=get_global_mouse_position()
 	var mouse_rel=mouse_pos-lmp
-	if dragging_map:
+	if dragging_map and abs(mouse_pos[0])<1280 and abs(mouse_pos[1])<630:
 		$map.position.y+=mouse_rel.y
+	
+		
 	lmp=mouse_pos
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("lmb"):
 		dragging_map=true
 	if event.is_action_released("lmb"):
 		dragging_map=false
 var dragging_map=false
+
+var mouse_on_me=false
+func _on_area_2d_mouse_entered() -> void:
+	mouse_on_me=true
+
+
+func _on_area_2d_mouse_exited() -> void:
+	mouse_on_me=false

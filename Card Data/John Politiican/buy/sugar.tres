@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cadjvsq4swjbc"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_f7lg6"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_8o01n"]
+[ext_resource type="Script" uid="uid://bilwm2ine2q0l" path="res://Effect Building/Combat/chronomancyEffect.gd" id="2_yb8db"]
+[ext_resource type="Script" uid="uid://bv3xej4wc1ski" path="res://Effect Building/Combat/DrawCardEffect.gd" id="3_2x5ej"]
+[ext_resource type="Script" uid="uid://bcpawpg7lbqrk" path="res://Effect Building/Combat/LoseHPEffect.gd" id="4_6iu5c"]
+
+[sub_resource type="Resource" id="Resource_8dm1r"]
+script = ExtResource("2_yb8db")
+time = 3
+metadata/_custom_type_script = "uid://bilwm2ine2q0l"
+
+[sub_resource type="Resource" id="Resource_8o01n"]
+script = ExtResource("3_2x5ej")
+cards_drawn = 4
+next_effect = SubResource("Resource_8dm1r")
+metadata/_custom_type_script = "uid://bv3xej4wc1ski"
+
+[sub_resource type="Resource" id="Resource_f7lg6"]
+script = ExtResource("4_6iu5c")
+amount = 10
+next_effect = SubResource("Resource_8o01n")
+metadata/_custom_type_script = "uid://bcpawpg7lbqrk"
+
+[resource]
+script = ExtResource("2_8o01n")
+money_cost = 0
+time_cost = 0
+card_description = "lose 10 hp
+draw 4 cards
+gain 3 time"
+effect = SubResource("Resource_f7lg6")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://clncfp356xdpo"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_e7824"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_g38al"]
+[ext_resource type="Resource" uid="uid://20301r8nahbi" path="res://Creature Data/Friends/Intern.tres" id="2_p7o3q"]
+[ext_resource type="Script" uid="uid://f4255sjwoq8y" path="res://Effect Building/Combat/Summon Creature.gd" id="3_1gl32"]
+
+[sub_resource type="Resource" id="Resource_e7824"]
+script = ExtResource("3_1gl32")
+creature_data = ExtResource("2_p7o3q")
+metadata/_custom_type_script = "uid://f4255sjwoq8y"
+
+[resource]
+script = ExtResource("2_g38al")
+money_cost = 3
+card_name = "Recruit Intern"
+card_description = "Recruit an Intern. He digs for 5 every turn. "
+effect = SubResource("Resource_e7824")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

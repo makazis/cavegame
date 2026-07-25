@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cns2487mfbdp6"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_5ld0y"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_dv27t"]
+[ext_resource type="Script" uid="uid://cy3i1cv6lcli3" path="res://Effect Building/Card Tomfoolery/temp_transform_efffect.gd" id="2_klej0"]
+[ext_resource type="Resource" uid="uid://daookaicxfkbq" path="res://Card Data/John Politiican/buy/glock.tres" id="3_1d8x3"]
+
+[sub_resource type="Resource" id="Resource_klej0"]
+script = ExtResource("2_klej0")
+transforming_card_data = ExtResource("3_1d8x3")
+metadata/_custom_type_script = "uid://cy3i1cv6lcli3"
+
+[resource]
+script = ExtResource("2_dv27t")
+money_cost = 4
+time_cost = 2
+card_name = "\"Borrow\" a gun"
+card_description = "Get a glock for this fight only. "
+effect = SubResource("Resource_klej0")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

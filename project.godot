@@ -27,11 +27,19 @@ CombatData="*uid://b5tq7vruloerc"
 window/size/viewport_width=2560
 window/size/viewport_height=1260
 window/size/mode=2
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/simple_cards/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Card Data/John Politiican/": "yellow",
+"res://Card Data/John Politiican/buy/": "green",
+"res://Card Data/John Politiican/hell/": "orange"
+}
 
 [input]
 

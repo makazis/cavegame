@@ -21,7 +21,7 @@ signal combat_ends
 
 var won=false
 var all_entities=[] #Just a set containing every entity that is loaded in game. 
-var effect_debug=true
+var effect_debug=false
 func debug_print(text:String):
 	if effect_debug:
 		print(text)
@@ -57,4 +57,9 @@ func on_end_game():
 			entity.queue_free()
 		all_entities.clear()
 		combat_ends.emit()
+	EffectContext.debug_print("Removing Cards")
+	for card in EffectContext.roles["Caster"][0].combat_root.get_cards_in_piles(["Deck","DiscardPile","Hand","StartOfTurnGetsPlayed","DismountPile","ExhaustPile"]):
+		EffectContext.debug_print("===> Found card "+card[1].card_data.card_name+" in pile "+card[0])
+		EffectContext.roles["Caster"][0].combat_root.find_child(card[0]).cards.erase(card[1])
+		card[1].queue_free()
 		#print("CE EMITTED")

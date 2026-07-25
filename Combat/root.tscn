@@ -1,16 +1,7 @@
 [gd_scene format=3 uid="uid://wtjqtvkrv78y"]
 
 [ext_resource type="Script" uid="uid://5brbuxyb7kh" path="res://Combat/root.gd" id="1_cgq65"]
-[ext_resource type="Resource" uid="uid://x08r57e1mwbk" path="res://Card Data/John Politiican/defend.tres" id="5_cgq65"]
-[ext_resource type="Resource" uid="uid://c1jq44mgb3s2n" path="res://Card Data/John Politiican/Strike.tres" id="6_jsov7"]
-[ext_resource type="Resource" uid="uid://dkl6wx2h2orm5" path="res://Card Data/John Politiican/Dig.tres" id="7_lferd"]
-[ext_resource type="Resource" uid="uid://n6abwd277h7o" path="res://Card Data/John Politiican/ShovelStrike.tres" id="8_jsov7"]
 [ext_resource type="Script" uid="uid://bkxlv2512vggc" path="res://Combat/deck.gd" id="9_71fpb"]
-[ext_resource type="Resource" uid="uid://cavc5ala67ft4" path="res://Card Data/John Politiican/Mounts/Bicycle/Bicycle.tres" id="9_lferd"]
-[ext_resource type="Script" uid="uid://bisyk4bowdvsf" path="res://addons/simple_cards/deck/manager/card_deck_manager.gd" id="10_kffyy"]
-[ext_resource type="Resource" uid="uid://beow1nqrtah61" path="res://Card Data/John Politiican/Mounts/Bulldozer/Bulldozer.tres" id="10_kp6kh"]
-[ext_resource type="Script" uid="uid://c8315v58tr66b" path="res://addons/simple_cards/card/card_resource/card_resource.gd" id="11_g2ija"]
-[ext_resource type="Script" uid="uid://lhb5ry3o8icy" path="res://addons/simple_cards/deck/card_deck.gd" id="14_88goi"]
 [ext_resource type="Script" uid="uid://cqlyvmgm30540" path="res://Combat/hand.gd" id="15_u8awk"]
 [ext_resource type="Script" uid="uid://cgtxv1fnflwfu" path="res://addons/simple_cards/shape/premade_shapes/arc_shape.gd" id="16_k8i5p"]
 [ext_resource type="Script" uid="uid://d2l8uaoel5whd" path="res://addons/simple_cards/containers/pile/card_pile.gd" id="17_b47kv"]
@@ -24,12 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dljnsp5xuxjkp" path="res://IMG_2341.png" id="27_u8awk"]
 [ext_resource type="Texture2D" uid="uid://bychlovjo8mo0" path="res://IMG_2342.png" id="28_k8i5p"]
 [ext_resource type="Texture2D" uid="uid://cfvbal1an5n84" path="res://IMG_2343.png" id="29_b47kv"]
-
-[sub_resource type="Resource" id="Resource_r3r3k"]
-script = ExtResource("14_88goi")
-deck_name = &"TestDeck"
-cards = Array[ExtResource("11_g2ija")]([ExtResource("5_cgq65"), ExtResource("5_cgq65"), ExtResource("5_cgq65"), ExtResource("5_cgq65"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("6_jsov7"), ExtResource("7_lferd"), ExtResource("8_jsov7"), ExtResource("9_lferd"), ExtResource("10_kp6kh")])
-metadata/_custom_type_script = "uid://lhb5ry3o8icy"
 
 [sub_resource type="Resource" id="Resource_gd4vy"]
 script = ExtResource("16_k8i5p")
@@ -67,13 +52,6 @@ offset_bottom = 1367.0
 script = ExtResource("9_71fpb")
 face_up = true
 metadata/_custom_type_script = "uid://d2l8uaoel5whd"
-
-[node name="CardDeckManager" type="Node" parent="Deck" unique_id=134106264 node_paths=PackedStringArray("starting_pile")]
-script = ExtResource("10_kffyy")
-deck = SubResource("Resource_r3r3k")
-starting_pile = NodePath("..")
-auto_setup = true
-metadata/_custom_type_script = "uid://bisyk4bowdvsf"
 
 [node name="Hand" type="Panel" parent="." unique_id=219155563]
 self_modulate = Color(1, 1, 1, 0)

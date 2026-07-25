@@ -20,6 +20,13 @@ font_size = 100
 outline_size = 1
 outline_color = Color(0.7581918, 0.7581918, 0.7581917, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ngurv"]
+font = ExtResource("3_6gbdn")
+font_size = 80
+font_color = Color(0.23333335, 1, 0, 1)
+outline_size = 1
+outline_color = Color(0.7581918, 0.7581918, 0.7581917, 1)
+
 [node name="CardLayout" type="SubViewportContainer" unique_id=1099597718]
 offset_right = 80.0
 offset_bottom = 112.0
@@ -104,3 +111,13 @@ texture = ExtResource("12_ggl7s")
 [node name="Four Time" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=2106135767]
 visible = false
 texture = ExtResource("13_llcf3")
+
+[node name="Label3" type="Label" parent="SubViewport/DefaultCardSprite" unique_id=877142535]
+visible = false
+offset_left = -631.99304
+offset_top = -719.1136
+offset_right = -366.4982
+offset_bottom = -516.0285
+label_settings = SubResource("LabelSettings_ngurv")
+horizontal_alignment = 1
+vertical_alignment = 1

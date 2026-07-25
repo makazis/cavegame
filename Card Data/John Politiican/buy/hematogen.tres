@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://c85ybiwqjceow"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_vd48w"]
+[ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_1y0lx"]
+[ext_resource type="Script" uid="uid://bv3xej4wc1ski" path="res://Effect Building/Combat/DrawCardEffect.gd" id="2_7tu86"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_yn1dk"]
+[ext_resource type="Script" uid="uid://bilwm2ine2q0l" path="res://Effect Building/Combat/chronomancyEffect.gd" id="3_1y0lx"]
+
+[sub_resource type="Resource" id="Resource_n7y4g"]
+script = ExtResource("2_1y0lx")
+metadata/_custom_type_script = "uid://0okdd0vdqmcv"
+
+[sub_resource type="Resource" id="Resource_1y0lx"]
+script = ExtResource("2_7tu86")
+metadata/_custom_type_script = "uid://bv3xej4wc1ski"
+
+[sub_resource type="Resource" id="Resource_7tu86"]
+script = ExtResource("3_1y0lx")
+time = 1
+next_effect = SubResource("Resource_1y0lx")
+metadata/_custom_type_script = "uid://bilwm2ine2q0l"
+
+[resource]
+script = ExtResource("2_yn1dk")
+money_cost = 0
+time_cost = 0
+card_name = "Hematogen"
+card_description = "gain 1 time
+draw 1 card
+consumable"
+effect = SubResource("Resource_7tu86")
+card_tags = Array[ExtResource("1_vd48w")]([SubResource("Resource_n7y4g")])
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

@@ -144,7 +144,7 @@ func update_target_line():
 	if target!=null and len(targets)>0:
 		$Line2D.set_point_position(1,((target.center.global_position-center.global_position)))
 	else:
-		$Line2D.set_point_position(1,Vector2(0,0))
+		$Line2D.set_point_position(1,$Line2D.get_point_position(0))
 var target:Creature_Node=null
 signal attack_finished()
 
@@ -168,7 +168,15 @@ func execute_attack():
 		else:
 			iteratable_targets=[target]
 		for i in action_iter.times:
-			
+			if action_iter.type=="Dig":
+				if data.name=="Intern":
+					$S.region_rect=Rect2(256,256*miner_skin_color,256,256)
+					await get_tree().create_timer(0.4).timeout
+					$S.region_rect=Rect2(512,256*miner_skin_color,256,256)
+					await get_tree().create_timer(0.4).timeout
+					$S.region_rect=Rect2(0,256*miner_skin_color,256,256)
+					CombatData.dig-=action_iter.amount
+					continue
 			#await get_tree().create_timer(0.2).timeout
 			if not (action_iter.target_perhaps==null or action_iter.target_perhaps==""):
 				iteratable_targets=EffectContext.roles[action_iter.target_perhaps]
@@ -201,8 +209,12 @@ func execute_attack():
 					visual_update()
 	attack_finished.emit()
 	
-# Called when the node enters the scene tree for the first time.
+# Called when the node enters the scene tree for the first time.\
+var miner_skin_color=randi_range(0,2)
 func _ready() -> void:
+	if data.name=="Intern":
+		$S.region_rect=Rect2(0,256*miner_skin_color,256,256)
+		
 	max_hp=data.hp
 	$S.texture=data.image
 	
@@ -232,6 +244,7 @@ func visual_update():
 		$S/ProgressBar.texture_progress.gradient.set_color(1,Color(1.0, 0.0, 0.0, 1.0))
 	if data.hp<=0:
 		queue_free()
+	update_target_line()
 ##Status effect visual functions
 func update_status_effects():
 	for iter_status in  $S/GridContainer.get_children():
@@ -248,4 +261,8 @@ func _exit_tree() -> void:
 	EffectContext.roles[data.team].erase(self)
 	EffectContext.check_if_combat_ends()
 
-	
+var animation_timer=0
+#func _process(delta: float) -> void:
+	#animation_timer+=delta
+	#if data.name=="Intern":
+		

@@ -4,4 +4,6 @@ class_name CreateCardEffect extends Effect
 func run():
 	#for iter_target in EffectContext.roles["Caster"]:
 	EffectContext.roles["Caster"][0].combat_root.create_card_in(created_card_data,place_where)
+	
 	EffectContext.debug_print("Created card "+str(created_card_data.card_name)+" in pile "+place_where)
+	

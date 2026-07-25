@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://bf354silysksa"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_uu2qk"]
+[ext_resource type="Script" uid="uid://c05j30rnbu6y7" path="res://Effect Building/Combat/Apply Status.gd" id="2_1ne7l"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_sj5es"]
+
+[sub_resource type="Resource" id="Resource_1ne7l"]
+script = ExtResource("2_1ne7l")
+amount = 4
+status_effect = "Burning"
+metadata/_custom_type_script = "uid://c05j30rnbu6y7"
+
+[resource]
+script = ExtResource("2_sj5es")
+card_name = "Molotov"
+card_description = "Apply 4 burning"
+effect = SubResource("Resource_1ne7l")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

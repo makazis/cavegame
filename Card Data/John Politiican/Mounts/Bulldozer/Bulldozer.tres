@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://beow1nqrtah61"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_lncxf"]
+[ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_c7vch"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_h7e71"]
 [ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="2_ioru2"]
 [ext_resource type="Resource" uid="uid://cfsn8m87maibi" path="res://Card Data/John Politiican/Mounts/Bulldozer/bulldozermounteffect.tres" id="2_thrdf"]
@@ -9,6 +10,10 @@
 [ext_resource type="Resource" uid="uid://pyo5rbmelx0g" path="res://Card Data/John Politiican/Mounts/Bulldozer/BulldozerRam.tres" id="4_c7vch"]
 [ext_resource type="Resource" uid="uid://fsm7douc2t7o" path="res://Card Data/John Politiican/Mounts/Bulldozer/bulldozer_parry.tres" id="5_tmbb8"]
 [ext_resource type="Resource" uid="uid://7uqdjs0rm1s8" path="res://Card Data/John Politiican/Mounts/Bulldozer/dismountbulldozer.tres" id="6_r2cty"]
+
+[sub_resource type="Resource" id="Resource_285hx"]
+script = ExtResource("2_c7vch")
+metadata/_custom_type_script = "uid://0okdd0vdqmcv"
 
 [sub_resource type="Resource" id="Resource_i3odp"]
 script = ExtResource("2_ioru2")
@@ -56,4 +61,5 @@ time_cost = 3
 card_name = "Bulldozer"
 card_description = "Mount. Gain 20 block each turn. gain 2 less time each turn"
 effect = SubResource("Resource_kmevl")
+card_tags = Array[ExtResource("1_lncxf")]([SubResource("Resource_285hx")])
 metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

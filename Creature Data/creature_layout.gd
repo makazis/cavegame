@@ -2,7 +2,7 @@
 class_name Creature extends Resource
 
 @export var name:String="";
-@export var display_size:int=1;
+@export var display_size:float=1;
 @export var hp:int=10;
 
 @export var block:int=0; #like that one orb enemy in sts that starts with block. 

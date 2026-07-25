@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://diog56y1ltex0"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_6p5uk"]
+[ext_resource type="Script" uid="uid://dw72irwsah82e" path="res://Effect Building/Card Tomfoolery/perm_transform_efffect.gd" id="2_5veob"]
+[ext_resource type="Resource" uid="uid://beow1nqrtah61" path="res://Card Data/John Politiican/Mounts/Bulldozer/Bulldozer.tres" id="3_6p5uk"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="4_3xf2q"]
+
+[sub_resource type="Resource" id="Resource_yqndm"]
+script = ExtResource("2_5veob")
+transforming_card_data = ExtResource("3_6p5uk")
+metadata/_custom_type_script = "uid://dw72irwsah82e"
+
+[resource]
+script = ExtResource("4_3xf2q")
+money_cost = 30
+time_cost = 4
+card_name = "Buy a Bulldozer"
+card_description = "Buy the Bulldozer Mount"
+effect = SubResource("Resource_yqndm")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

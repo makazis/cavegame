@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cs24hn5xkj3p6"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_ncs6n"]
+[ext_resource type="Script" uid="uid://drt5po2eht3pn" path="res://Effect Building/Combat/Deal Damage Static.gd" id="2_iev3a"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_tfoxh"]
+[ext_resource type="Script" uid="uid://bilwm2ine2q0l" path="res://Effect Building/Combat/chronomancyEffect.gd" id="3_6qv17"]
+[ext_resource type="Script" uid="uid://bv3xej4wc1ski" path="res://Effect Building/Combat/DrawCardEffect.gd" id="4_ueho0"]
+
+[sub_resource type="Resource" id="Resource_6qv17"]
+script = ExtResource("2_iev3a")
+target = "Caster"
+damage = 3
+metadata/_custom_type_script = "uid://drt5po2eht3pn"
+
+[sub_resource type="Resource" id="Resource_iev3a"]
+script = ExtResource("3_6qv17")
+time = 1
+next_effect = SubResource("Resource_6qv17")
+metadata/_custom_type_script = "uid://bilwm2ine2q0l"
+
+[sub_resource type="Resource" id="Resource_chaql"]
+script = ExtResource("4_ueho0")
+next_effect = SubResource("Resource_iev3a")
+metadata/_custom_type_script = "uid://bv3xej4wc1ski"
+
+[resource]
+script = ExtResource("2_tfoxh")
+money_cost = 0
+card_name = "Burn™"
+card_description = "Draw 1 card™
+Gain 1™ time
+Take 3 damage
+"
+effect = SubResource("Resource_chaql")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

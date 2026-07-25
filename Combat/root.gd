@@ -4,14 +4,14 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 var drawn_cards=false
 var creature_load_reference={
-	"Fang Yuan":preload("res://Creature Data/Friends/cultivator.tres"),
+	"Fang Yuan":preload("res://Creature Data/Friends/john_politician.tres"),
 	"Spectral Dog":preload("res://Creature Data/Enemies/Ethereal Dog.tres"),
+	"Bigfoot":preload("res://Creature Data/Enemies/bigfootprobably.tres")
 }
 func _ready() -> void:
-	setup()
 	CombatData.root_visual_update.connect(visual_update)
 	EffectContext.combat_ends.connect(_on_combat_ends)
-	start_the_turn.call_deferred()
+	
 	
 	pass # Replace with function body.
 
@@ -25,16 +25,29 @@ var uf_space_y=0
 var uf_y_window_size=0
 ##These six values denote where will new entities be placed. 
 
-func setup():
+func setup(_enemies):
 	var main_character=creature.instantiate()
 	main_character.data=creature_load_reference["Fang Yuan"].duplicate() # use when creating characters
 	EffectContext.roles["Caster"]=[main_character]
 	var enemies=[]
-	for i in range(1):
+	for i in _enemies:
 		var temp_enemy=creature.instantiate()
-		temp_enemy.data=creature_load_reference["Spectral Dog"].duplicate()
+		temp_enemy.data=creature_load_reference[i].duplicate()
 		enemies.append(temp_enemy)
+	f_space_x=0
+	f_space_y=0 
+	f_y_window_size=0
+	uf_space_x=0
+	uf_space_y=0 
+	uf_y_window_size=0
 	setup_entities([main_character],enemies)
+	CombatData.money+=7
+	#print(get_parent().get_parent().find_child("CardDeckManager").deck.cards)
+	#for card in get_parent().get_parent().find_child("CardDeckManager").deck.cards:
+	#	$Deck/CardDeckManager.deck.cards.append(card.duplicate())
+	$Deck.shuffle()
+	start_the_turn.call_deferred()
+	
 func create_creature(creature_data) -> Creature_Node:
 	var temp_enemy=creature.instantiate()
 	temp_enemy.data=creature_data.duplicate()
@@ -158,13 +171,14 @@ func create_card_in(card_resource:CardResource,card_pile:String="Hand"):
 		card.move_to($Hand, Card.MoveConfig.new(0))
 	if card_pile=="DiscardPile":
 		card.move_to($DiscardPile, Card.MoveConfig.new(0))
+		$DiscardPile.shuffle()
 	if card_pile=="Deck":
 		card.move_to($Deck, Card.MoveConfig.new(0))
+		$Deck.shuffle()
 	if card_pile=="StartOfTurnGetsPlayed":
 		card.move_to($StartOfTurnGetsPlayed, Card.MoveConfig.new(0))
 	if card_pile=="DismountPile":
 		card.move_to($DismountPile, Card.MoveConfig.new(0))
-	
 func get_cards_in_piles(piles=["Deck","DiscardPile","Hand"]):
 	var out_cards=[]
 	for i in piles:
@@ -200,7 +214,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_released("lmb"):
 			dragging_friendly_area=false
 		if dragging_friendly_area:
-			$"Friendly Characters".position.y=clamp($"Friendly Characters".position.y+mouse_rel[1]*2,f_space_y+602,602)
+			$"Friendly Characters".position.y=clamp($"Friendly Characters".position.y+mouse_rel[1]*2,602,602-f_space_y)
 			for entity in EffectContext.all_entities:
 				entity.update_target_line()
 	if mouse_over_unfriendly_area:
@@ -209,7 +223,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_released("lmb"):
 			dragging_unfriendly_area=false
 		if dragging_unfriendly_area:
-			$"UnFriendly Characters".position.y=clamp($"UnFriendly Characters".position.y+mouse_rel[1]*2,f_space_y+602,602)
+			$"UnFriendly Characters".position.y=clamp($"UnFriendly Characters".position.y+mouse_rel[1]*2,602,602-uf_space_y)
 			for entity in EffectContext.all_entities:
 				entity.update_target_line()
 	

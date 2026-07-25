@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cgc0voamewl5m"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_oexx6"]
+[ext_resource type="Script" uid="uid://bv3xej4wc1ski" path="res://Effect Building/Combat/DrawCardEffect.gd" id="2_gryvq"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_r7vg7"]
+[ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="3_uu5ji"]
+[ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="5_65i0p"]
+
+[sub_resource type="Resource" id="Resource_uu5ji"]
+script = ExtResource("2_gryvq")
+metadata/_custom_type_script = "uid://bv3xej4wc1ski"
+
+[sub_resource type="Resource" id="Resource_0omcl"]
+script = ExtResource("3_uu5ji")
+block = 6
+next_effect = SubResource("Resource_uu5ji")
+metadata/_custom_type_script = "uid://udmx0spixt2u"
+
+[sub_resource type="Resource" id="Resource_gryvq"]
+script = ExtResource("5_65i0p")
+metadata/_custom_type_script = "uid://co0nojkhbeoum"
+
+[resource]
+script = ExtResource("2_r7vg7")
+time_cost = 0
+card_name = "Pepper Spray"
+card_description = "gain 6 block
+draw 1 card"
+effect = SubResource("Resource_0omcl")
+target_criteria = SubResource("Resource_gryvq")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

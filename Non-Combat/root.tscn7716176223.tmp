@@ -84,9 +84,6 @@ position = Vector2(3840, -630)
 [node name="Map" parent="Screens" unique_id=989293573 instance=ExtResource("5_r07rg")]
 position = Vector2(-1280, -630)
 
-[node name="CollisionShape2D" parent="Screens/Map/Area2D" parent_id_path=PackedInt32Array(989293573, 552724803) index="0" unique_id=1040657782]
-scale = Vector2(0.8356531, 0.8389022)
-
 [node name="Marker2D" type="Marker2D" parent="." unique_id=10343137]
 position = Vector2(1665, 0)
 
@@ -97,4 +94,3 @@ starting_pile = NodePath("../Screens/Root/Deck")
 metadata/_custom_type_script = "uid://bisyk4bowdvsf"
 
 [editable path="Screens/Root"]
-[editable path="Screens/Map"]

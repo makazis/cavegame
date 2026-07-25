@@ -1,5 +1,5 @@
 extends Node2D
-
+@export var enabled=false
 var links={
 	"https://youtu.be/kClwJxgmrgk?si=GxCWQNQ2wpQkzaGW":Vector3(0,3,38),	
 	"https://youtu.be/j8_c5FwGuDs?si=BWCn-JHWKEZ0Ep4l":Vector3(0,21,23),
@@ -29,16 +29,16 @@ var links={
 func _ready() -> void:
 	_on_timer_timeout()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_timer_timeout() -> void:
+	
 	var random_link=links.keys().pick_random()
-	OS.shell_open(random_link)
+	if enabled:	
+		OS.shell_open(random_link)
 	if randi_range(0,19)==0:
 		_on_timer_timeout()
-	else:	
+	else:
 		$Timer.start(links[random_link][0]*3600+links[random_link][1]*60+links[random_link][2]+3)

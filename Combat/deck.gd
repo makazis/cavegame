@@ -11,6 +11,8 @@ func deal_to(target: CardContainer, count: int, config: Card.MoveConfig = null) 
 		if cards.is_empty():
 			$"../DiscardPile".move_all_to(self)
 		var card = cards.back()
+		if card==null:
+			return 0
 		if !target.can_accept_card(card): break
 		card.move_to(target, config)
 		dealt += 1

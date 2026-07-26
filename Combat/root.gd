@@ -29,6 +29,9 @@ var uf_y_window_size=0
 func setup(_enemies):
 	var main_character=creature.instantiate()
 	main_character.data=creature_load_reference["Fang Yuan"].duplicate() # use when creating characters
+	main_character.max_hp=main_character.data.hp
+	main_character.data.hp=CombatData.player_hp
+	print(main_character.data.hp," ",main_character.max_hp)
 	EffectContext.roles["Caster"]=[main_character]
 	var enemies=[]
 	for i in _enemies:

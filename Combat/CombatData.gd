@@ -5,6 +5,7 @@ var max_money=7
 var time=4
 var max_time=4
 var turn=0
+var max_dig=40
 var dig=40:
 	set(value):
 		dig=value
@@ -50,5 +51,6 @@ func gu_worm_start_of_turn_effects(turn_number:int):
 	for worm in player_gu_worms:
 		worm.start_turn(turn_number)
 func on_card_clicked(card:Card):
-	print(card.card_data.card_name)
+	if EffectContext.roles["Caster"][0]==null:
+		return
 	EffectContext.roles["Caster"][0].combat_root.on_card_clicked(card)

@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://c34nur6xa18we"]
+
+[ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="1_5q135"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1_5q135")
+font_size = 50
+
+[sub_resource type="Gradient" id="Gradient_ly3su"]
+offsets = PackedFloat32Array(0, 0.18128654, 0.33040935, 0.5, 0.73099416, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.25121108, 0.16540667, 2.4065375e-08, 1, 0.64338595, 0.25584975, 0.018649029, 1, 0.95813686, 0, 0.057053126, 1, 0.92988235, 0.5356793, 0, 1, 0.68806374, 0.55341023, 5.7756904e-07, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p1u0y"]
+gradient = SubResource("Gradient_ly3su")
+width = 460
+height = 460
+fill = 1
+fill_from = Vector2(0.3888889, 0.11965812)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2j2di"]
+font = ExtResource("1_5q135")
+font_size = 48
+
+[sub_resource type="Gradient" id="Gradient_rhxf1"]
+offsets = PackedFloat32Array(0, 0.28362572, 0.37134504, 0.5263158, 0.7631579, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.73300093, 0, 0.39157975, 1, 1.92523e-07, 0.4324501, 0.41828012, 1, 3.85046e-07, 0.8649002, 0.83656025, 1, 0.714534, 0.9400924, 2.695322e-06, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5s0fj"]
+gradient = SubResource("Gradient_rhxf1")
+width = 460
+height = 460
+fill = 3
+fill_from = Vector2(0.3888889, 0.4957265)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_33x8s"]
+font_size = 48
+
+[node name="Campfire" type="Node2D" unique_id=2128875683]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=11341270]
+offset_right = 2560.0
+offset_bottom = 1260.0
+color = Color(0.14406255, 0.14406255, 0.14406249, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=432498731]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 214.0
+offset_right = 738.0
+offset_bottom = 278.0
+text = "You arrive at a campfire. 
+
+             You feel the warmth, and it's so pleasant.
+
+       You wonder if you can "
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=2009521205]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 320.0
+offset_right = 839.0
+offset_bottom = 384.0
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=122199167]
+offset_left = 2016.0
+offset_top = 66.0
+offset_right = 2476.0
+offset_bottom = 526.0
+texture_normal = SubResource("GradientTexture2D_p1u0y")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="TextureButton" unique_id=632902533]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 20.0
+offset_right = 399.0
+offset_bottom = 81.0
+text = "Restore 20 HP"
+label_settings = SubResource("LabelSettings_2j2di")
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=371004767]
+offset_left = 2051.0
+offset_top = 725.0
+offset_right = 2511.0
+offset_bottom = 1185.0
+texture_normal = SubResource("GradientTexture2D_5s0fj")
+
+[node name="Label2" type="Label" parent="TextureButton2" unique_id=1138094565]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 5.0
+offset_right = 207.0
+offset_bottom = 28.0
+text = "Fuse Cards"
+label_settings = SubResource("LabelSettings_33x8s")

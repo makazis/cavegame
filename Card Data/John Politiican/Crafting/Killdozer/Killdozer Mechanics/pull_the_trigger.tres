@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://w16d5yt8envm"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_wxx25"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_iegnb"]
+[ext_resource type="Script" uid="uid://bcpawpg7lbqrk" path="res://Effect Building/Combat/LoseHPEffect.gd" id="2_scx80"]
+
+[sub_resource type="Resource" id="Resource_scx80"]
+script = ExtResource("2_scx80")
+amount = 100000000
+metadata/_custom_type_script = "uid://bcpawpg7lbqrk"
+
+[resource]
+script = ExtResource("2_iegnb")
+money_cost = 0
+time_cost = 0
+card_name = "Pull The Trigger"
+card_description = "Lose all your HP"
+effect = SubResource("Resource_scx80")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

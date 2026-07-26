@@ -14,24 +14,23 @@
 [ext_resource type="Resource" uid="uid://c1jq44mgb3s2n" path="res://Card Data/John Politiican/Strike.tres" id="11_iwoyh"]
 [ext_resource type="Script" uid="uid://lhb5ry3o8icy" path="res://addons/simple_cards/deck/card_deck.gd" id="12_5l04m"]
 [ext_resource type="PackedScene" uid="uid://bbtuayi2137ai" path="res://Non-Combat/card rewards/card_reward_screen.tscn" id="13_7olg0"]
-[ext_resource type="Resource" uid="uid://clm8s8vofvwy6" path="res://Card Data/John Politiican/Test/test.tres" id="13_526gw"]
 [ext_resource type="PackedScene" uid="uid://btdkswm55gbmu" path="res://Shitposting/MusicPlayerTrustMeBro.tscn" id="16_38q5j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font = ExtResource("2_hjd13")
 font_size = 32
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_38q5j"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb442"]
 resource_local_to_scene = true
 size = Vector2(1232, 1241)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwoyh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38q5j"]
 resource_local_to_scene = true
 size = Vector2(1232, 956)
 
 [sub_resource type="Resource" id="Resource_g4v7s"]
 script = ExtResource("12_5l04m")
-cards = Array[ExtResource("7_7olg0")]([ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("9_mb442"), ExtResource("10_38q5j"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("13_526gw")])
+cards = Array[ExtResource("7_7olg0")]([ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("8_526gw"), ExtResource("9_mb442"), ExtResource("10_38q5j"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh"), ExtResource("11_iwoyh")])
 metadata/_custom_type_script = "uid://lhb5ry3o8icy"
 
 [node name="Root" type="Node2D" unique_id=1285266550]
@@ -43,6 +42,7 @@ ignore_rotation = false
 script = ExtResource("2_mb442")
 
 [node name="Panel" type="Panel" parent="Camera2D" unique_id=1805718938]
+z_index = 500
 offset_left = -1280.0
 offset_top = -630.0
 offset_right = 1280.0
@@ -78,10 +78,10 @@ offset_right = 2304.0
 offset_bottom = 1446.0
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea4" parent_id_path=PackedInt32Array(1328499140, 1743876184) index="0" unique_id=1810447271]
-shape = SubResource("RectangleShape2D_38q5j")
+shape = SubResource("RectangleShape2D_mb442")
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea3" parent_id_path=PackedInt32Array(1328499140, 220950517) index="0" unique_id=30001419]
-shape = SubResource("RectangleShape2D_iwoyh")
+shape = SubResource("RectangleShape2D_38q5j")
 
 [node name="PostCombatRewards" parent="Screens" unique_id=130116637 instance=ExtResource("10_5htkc")]
 position = Vector2(3840, -630)

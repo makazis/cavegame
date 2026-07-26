@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://30fasxevl7au"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_enpfh"]
+[ext_resource type="Script" uid="uid://dw72irwsah82e" path="res://Effect Building/Card Tomfoolery/perm_transform_efffect.gd" id="2_1xi2h"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_3jxx4"]
+
+[sub_resource type="Resource" id="Resource_gy3rv"]
+script = ExtResource("2_1xi2h")
+metadata/_custom_type_script = "uid://dw72irwsah82e"
+
+[resource]
+script = ExtResource("2_3jxx4")
+money_cost = 30
+time_cost = 4
+card_name = "Buy Flamethrower"
+card_description = "Buy a flamethrower"
+effect = SubResource("Resource_gy3rv")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

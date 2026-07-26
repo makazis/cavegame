@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://c7jnrw10f62ed"]
+
+[ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_df61x"]
+[ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_b5y0l"]
+[ext_resource type="Script" uid="uid://drt5po2eht3pn" path="res://Effect Building/Combat/Deal Damage Static.gd" id="2_unh7w"]
+[ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="4_o3ylj"]
+
+[sub_resource type="Resource" id="Resource_unh7w"]
+script = ExtResource("2_unh7w")
+damage = 60
+metadata/_custom_type_script = "uid://drt5po2eht3pn"
+
+[sub_resource type="Resource" id="Resource_o3ylj"]
+script = ExtResource("4_o3ylj")
+metadata/_custom_type_script = "uid://co0nojkhbeoum"
+
+[resource]
+script = ExtResource("2_b5y0l")
+money_cost = 0
+time_cost = 2
+card_name = "Ram"
+card_description = "Deal 60 damage"
+effect = SubResource("Resource_unh7w")
+target_criteria = SubResource("Resource_o3ylj")
+metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

@@ -187,6 +187,9 @@ func execute_attack():
 			for iter_target in iteratable_targets:
 				if iter_target==null:
 					continue
+				if self==null:
+					continue
+				
 				if action_iter.type=="Attack":
 					var offset_vector=Vector2(-70,0)
 					if data.team=="Friendly":
@@ -196,6 +199,11 @@ func execute_attack():
 					tween.tween_property($S,"position",og_pos+offset_vector,0.2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 
 					await tween.finished
+					
+					if iter_target==null:
+						continue
+					if self==null:
+						continue
 					CombatFunctions.deal_damage(data,iter_target.data,action_iter.amount)
 					tween=create_tween()
 					tween.tween_property($S,"position",og_pos,0.2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
@@ -219,9 +227,10 @@ func _ready() -> void:
 	if data.name=="Intern":
 		$S.region_rect=Rect2(0,256*miner_skin_color,256,256)
 		
-	max_hp=data.hp
+	#max_hp=data.hp
 	$S.texture=data.image
-	
+	if !data.main_character:
+		max_hp=data.hp
 	## Setting the size correctly
 	_scale=data.display_size
 	$S.scale=Vector2(data.display_size,data.display_size)
@@ -233,7 +242,7 @@ func _ready() -> void:
 	EffectContext.roles[data.team].append(self)
 	CombatData.start_turn.connect(on_start_turn)
 	CombatData.end_turn.connect(on_end_turn)
-
+	og_pos=position
 func visual_update():
 	$S/ProgressBar.value=float(data.hp)/max_hp*100.
 	$S/ProgressBar/Label.text="%d/%d" % [data.hp,max_hp]
@@ -268,7 +277,14 @@ func _exit_tree() -> void:
 	EffectContext.check_if_combat_ends()
 
 var animation_timer=0
-#func _process(delta: float) -> void:
+var og_pos=Vector2(0,0)
+func _process(delta: float) -> void:
+	var lpos=position
+	if data.main_character:
+		position=og_pos+Vector2(0,(CombatData.max_dig-CombatData.dig)/CombatData.max_dig*500)
+		if position!=lpos:
+			for entity in EffectContext.all_entities:
+				visual_update()
 	#animation_timer+=delta
 	#if data.name=="Intern":
 		

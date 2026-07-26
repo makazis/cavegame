@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_uu2qk"]
 [ext_resource type="Script" uid="uid://c05j30rnbu6y7" path="res://Effect Building/Combat/Apply Status.gd" id="2_1ne7l"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_sj5es"]
+[ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="4_1ne7l"]
 
 [sub_resource type="Resource" id="Resource_1ne7l"]
 script = ExtResource("2_1ne7l")
@@ -10,9 +11,14 @@ amount = 12
 status_effect = "Burning"
 metadata/_custom_type_script = "uid://c05j30rnbu6y7"
 
+[sub_resource type="Resource" id="Resource_mb442"]
+script = ExtResource("4_1ne7l")
+metadata/_custom_type_script = "uid://co0nojkhbeoum"
+
 [resource]
 script = ExtResource("2_sj5es")
 card_name = "Molotov"
 card_description = "Apply 12 burning"
 effect = SubResource("Resource_1ne7l")
+target_criteria = SubResource("Resource_mb442")
 metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

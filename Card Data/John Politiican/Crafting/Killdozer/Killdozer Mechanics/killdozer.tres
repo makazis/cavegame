@@ -4,12 +4,44 @@
 [ext_resource type="Resource" uid="uid://hq3dk0trd4vx" path="res://Card Data/John Politiican/Crafting/Killdozer/Killdozer Mechanics/killdozerSOT.tres" id="2_6ovwn"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_26neo"]
 [ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="3_ct0em"]
+[ext_resource type="Resource" uid="uid://c7jnrw10f62ed" path="res://Card Data/John Politiican/Crafting/Killdozer/Killdozer Mechanics/killdozerRam.tres" id="3_jvn70"]
+[ext_resource type="Resource" uid="uid://cg67twu5h0hn3" path="res://Card Data/John Politiican/Crafting/Killdozer/Killdozer Mechanics/Killdozer parry.tres" id="4_8jvg0"]
 [ext_resource type="Script" uid="uid://c5fwf2ionwh12" path="res://Effect Building/Card Tomfoolery/dismounteffect.gd" id="4_anev3"]
+[ext_resource type="Resource" uid="uid://b8iku00unx7sc" path="res://Card Data/John Politiican/Crafting/Killdozer/Killdozer Mechanics/killdozer block.tres" id="5_8vm0y"]
+[ext_resource type="Resource" uid="uid://w16d5yt8envm" path="res://Card Data/John Politiican/Crafting/Killdozer/Killdozer Mechanics/pull_the_trigger.tres" id="6_fybcf"]
+
+[sub_resource type="Resource" id="Resource_mmeka"]
+script = ExtResource("3_ct0em")
+created_card_data = ExtResource("6_fybcf")
+place_where = "DiscardPile"
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_ycmxe"]
+script = ExtResource("3_ct0em")
+created_card_data = ExtResource("5_8vm0y")
+place_where = "DiscardPile"
+next_effect = SubResource("Resource_mmeka")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_4deru"]
+script = ExtResource("3_ct0em")
+created_card_data = ExtResource("4_8jvg0")
+place_where = "DiscardPile"
+next_effect = SubResource("Resource_ycmxe")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
+
+[sub_resource type="Resource" id="Resource_cj37e"]
+script = ExtResource("3_ct0em")
+created_card_data = ExtResource("3_jvn70")
+place_where = "DiscardPile"
+next_effect = SubResource("Resource_4deru")
+metadata/_custom_type_script = "uid://bc517nkfa4ci3"
 
 [sub_resource type="Resource" id="Resource_qm0tu"]
 script = ExtResource("3_ct0em")
 created_card_data = ExtResource("2_6ovwn")
 place_where = "StartOfTurnGetsPlayed"
+next_effect = SubResource("Resource_cj37e")
 metadata/_custom_type_script = "uid://bc517nkfa4ci3"
 
 [sub_resource type="Resource" id="Resource_eh42v"]
@@ -22,6 +54,6 @@ script = ExtResource("2_26neo")
 money_cost = 0
 time_cost = 4
 card_name = "Killdozer"
-card_description = "Mount. At the start of each turn, gain 40 block and lose 2 time."
+card_description = "Mount. At the start of each turn, gain 40 block and lose 2 time. Permanently. "
 effect = SubResource("Resource_eh42v")
 metadata/_custom_type_script = "uid://c7xhxk6bgq13p"

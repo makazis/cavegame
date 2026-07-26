@@ -46,6 +46,7 @@ var enemies=enemy_costs.keys()
 func _on_button_pressed() -> void:
 	if unlocked:
 		CombatData.dig=40+pow(1+depth/30.,6)
+		CombatData.max_dig=CombatData.dig
 		get_parent().get_parent().dragging_map=false
 		generate_rewards()
 		var enemies_you_have_to_fight=[]

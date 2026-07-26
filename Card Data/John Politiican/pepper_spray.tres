@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cgc0voamewl5m"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_oexx6"]
+[ext_resource type="Texture2D" uid="uid://dftg8mpma4trp" path="res://Assets/IMG_2428.png" id="1_uu5ji"]
 [ext_resource type="Script" uid="uid://bv3xej4wc1ski" path="res://Effect Building/Combat/DrawCardEffect.gd" id="2_gryvq"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_r7vg7"]
 [ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="3_uu5ji"]
@@ -23,6 +24,7 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 [resource]
 script = ExtResource("2_r7vg7")
 time_cost = 0
+art = ExtResource("1_uu5ji")
 card_name = "Pepper Spray"
 card_description = "gain 6 block
 draw 1 card"

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cs24hn5xkj3p6"]
 
+[ext_resource type="Texture2D" uid="uid://p13sxvnueq2s" path="res://Assets/IMG_2430.png" id="1_6qv17"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_ncs6n"]
 [ext_resource type="Script" uid="uid://drt5po2eht3pn" path="res://Effect Building/Combat/Deal Damage Static.gd" id="2_iev3a"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_tfoxh"]
@@ -26,6 +27,7 @@ metadata/_custom_type_script = "uid://bv3xej4wc1ski"
 [resource]
 script = ExtResource("2_tfoxh")
 money_cost = 0
+art = ExtResource("1_6qv17")
 card_name = "Burn™"
 card_description = "Draw 1 card™
 Gain 1™ time

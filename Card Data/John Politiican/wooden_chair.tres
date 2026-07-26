@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://byapkgrxiutcc"]
 
+[ext_resource type="Texture2D" uid="uid://cmrrt28r0nlov" path="res://Assets/IMG_2432.png" id="1_pqmw8"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_v5jwi"]
 [ext_resource type="Script" uid="uid://drt5po2eht3pn" path="res://Effect Building/Combat/Deal Damage Static.gd" id="2_e3nky"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_tw05w"]
@@ -17,6 +18,7 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 [resource]
 script = ExtResource("2_tw05w")
 time_cost = 3
+art = ExtResource("1_pqmw8")
 card_name = "Wooden Chair Slam"
 card_description = "deal 27 damage"
 effect = SubResource("Resource_e3nky")

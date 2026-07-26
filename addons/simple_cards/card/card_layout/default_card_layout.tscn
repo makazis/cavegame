@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cex8i6gifygct" path="res://Assets/IMG_2334.png" id="11_acmvl"]
 [ext_resource type="Texture2D" uid="uid://bvf5khk03niom" path="res://Assets/IMG_2335.png" id="12_ggl7s"]
 [ext_resource type="Texture2D" uid="uid://b5ntxt013vhxd" path="res://Assets/IMG_2336.png" id="13_llcf3"]
+[ext_resource type="Texture2D" uid="uid://cysc27lrq02g" path="res://Assets/IMG_2423.png" id="14_f3yi5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mdmbe"]
 font = ExtResource("3_6gbdn")
@@ -123,3 +124,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=304383900]
+show_behind_parent = true
+position = Vector2(14.429111, 74.625114)
+texture = ExtResource("14_f3yi5")

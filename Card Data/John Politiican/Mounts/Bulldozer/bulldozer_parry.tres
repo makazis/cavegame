@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://fsm7douc2t7o"]
 
+[ext_resource type="Texture2D" uid="uid://c8ov1pxpt1vbg" path="res://Assets/IMG_2438.png" id="1_bevtb"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_kjrgo"]
 [ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_6c2ef"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_ht7io"]
@@ -17,6 +18,7 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 [resource]
 script = ExtResource("2_ht7io")
 money_cost = 0
+art = ExtResource("1_bevtb")
 card_name = "Bulldozer Parry"
 card_description = "gain 10 block"
 effect = SubResource("Resource_kjrgo")

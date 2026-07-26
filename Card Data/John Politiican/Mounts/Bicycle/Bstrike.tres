@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cjmothkeskwd7"]
 
+[ext_resource type="Texture2D" uid="uid://bm24lnet8yssa" path="res://Assets/IMG_2429.png" id="1_63mxd"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_scuw8"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_mbn12"]
 [ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_n0xl4"]
@@ -25,6 +26,7 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 [resource]
 script = ExtResource("2_mbn12")
 money_cost = 0
+art = ExtResource("1_63mxd")
 card_name = "Bycicle Strike"
 card_description = "deal 8 damage, gain 8 block"
 effect = SubResource("Resource_n0xl4")

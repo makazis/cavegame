@@ -38,6 +38,10 @@ metadata/_custom_type_script = "uid://lhb5ry3o8icy"
 [node name="Root" type="Node2D" unique_id=1285266550]
 script = ExtResource("1_igkdj")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=240867382]
+stream = ExtResource("16_iwoyh")
+autoplay = true
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2069670562]
 texture_filter = 2
 ignore_rotation = false
@@ -104,10 +108,6 @@ starting_pile = NodePath("../Screens/Root/Deck")
 metadata/_custom_type_script = "uid://bisyk4bowdvsf"
 
 [node name="MusicPlayerTrustMeBro" parent="." unique_id=2054029648 instance=ExtResource("16_38q5j")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=240867382]
-stream = ExtResource("16_iwoyh")
-autoplay = true
 
 [node name="Campfire" parent="." unique_id=2128875683 instance=ExtResource("17_iwoyh")]
 position = Vector2(6400, -630)

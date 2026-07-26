@@ -31,6 +31,7 @@ var uf_y_window_size=0
 ##These six values denote where will new entities be placed. 
 @onready var og_pos=$ColorRect/Img2364.position
 func setup(_enemies):
+	$AudioStreamPlayer2D.play()
 	var main_character=creature.instantiate()
 	main_character.data=creature_load_reference["Fang Yuan"].duplicate() # use when creating characters
 	main_character.max_hp=main_character.data.hp

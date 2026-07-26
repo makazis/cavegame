@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://beow1nqrtah61"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_lncxf"]
+[ext_resource type="Texture2D" uid="uid://c8ov1pxpt1vbg" path="res://Assets/IMG_2438.png" id="1_tmbb8"]
 [ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_c7vch"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_h7e71"]
 [ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="2_ioru2"]
@@ -58,6 +59,7 @@ metadata/_custom_type_script = "uid://c5fwf2ionwh12"
 script = ExtResource("2_h7e71")
 money_cost = 0
 time_cost = 3
+art = ExtResource("1_tmbb8")
 card_name = "Bulldozer"
 card_description = "Mount. Gain 20 block each turn. gain 2 less time each turn"
 effect = SubResource("Resource_kmevl")

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cfsn8m87maibi"]
 
+[ext_resource type="Texture2D" uid="uid://c8ov1pxpt1vbg" path="res://Assets/IMG_2438.png" id="1_27dba"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_lt1j7"]
 [ext_resource type="Script" uid="uid://bilwm2ine2q0l" path="res://Effect Building/Combat/chronomancyEffect.gd" id="2_27dba"]
 [ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_dge63"]
@@ -19,6 +20,7 @@ metadata/_custom_type_script = "uid://udmx0spixt2u"
 
 [resource]
 script = ExtResource("2_q0cj8")
+art = ExtResource("1_27dba")
 card_name = "Bulldozer"
 card_description = "gain 20 block
 lose 2 time"

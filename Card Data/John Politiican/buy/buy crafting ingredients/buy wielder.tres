@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://mxixhtklfek4"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_knwa6"]
+[ext_resource type="Texture2D" uid="uid://mw66phjhk8u3" path="res://Assets/IMG_2436.png" id="1_r3wcg"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_nnmww"]
 [ext_resource type="Script" uid="uid://dw72irwsah82e" path="res://Effect Building/Card Tomfoolery/perm_transform_efffect.gd" id="2_w2f7n"]
 [ext_resource type="Resource" uid="uid://dfx2tj6lbohss" path="res://Card Data/John Politiican/Crafting/Killdozer/wielder.tres" id="3_r3wcg"]
@@ -14,6 +15,7 @@ metadata/_custom_type_script = "uid://dw72irwsah82e"
 script = ExtResource("2_nnmww")
 money_cost = 20
 time_cost = 3
+art = ExtResource("1_r3wcg")
 card_name = "Buy A Wielder"
 card_description = "To burn people probably"
 effect = SubResource("Resource_w2f7n")

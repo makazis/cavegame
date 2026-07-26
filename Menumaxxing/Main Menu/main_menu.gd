@@ -12,7 +12,10 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Non-Combat/root.tscn")
+	if !Options.has_beaten_tutorial:
+		get_tree().change_scene_to_file("res://Menumaxxing/tutorial.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Non-Combat/root.tscn")
 
 
 func _on_button_2_pressed() -> void:

@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://ctnf1ho8l3yst"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_1q56l"]
+[ext_resource type="Texture2D" uid="uid://blbhp4fledvet" path="res://Assets/IMG_2437.png" id="1_fva4v"]
 [ext_resource type="Script" uid="uid://dw72irwsah82e" path="res://Effect Building/Card Tomfoolery/perm_transform_efffect.gd" id="2_dltlt"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_utqf4"]
 [ext_resource type="Resource" uid="uid://dju1b6o5u51wx" path="res://Card Data/John Politiican/Crafting/Killdozer/steel_sheets.tres" id="3_dltlt"]
@@ -14,6 +15,7 @@ metadata/_custom_type_script = "uid://dw72irwsah82e"
 script = ExtResource("2_utqf4")
 money_cost = 20
 time_cost = 3
+art = ExtResource("1_fva4v")
 card_name = "Buy a steel sheet"
 card_description = "Buy a sheet of steel"
 effect = SubResource("Resource_fva4v")

@@ -8,6 +8,7 @@ func _ready() -> void:
 var card_s=[]
 var mtype=""
 func setup(data):
+	
 	if common_cards==null:
 		return
 	mtype=data["Type"]
@@ -35,15 +36,19 @@ func _process(delta: float) -> void:
 	load("res://Card Data/John Politiican/buy/buy white monster.tres"),
 	load("res://Card Data/John Politiican/pepper_spray.tres"),
 	load("res://Card Data/John Politiican/wooden_chair.tres"),
-	load("res://Card Data/John Politiican/hell/molotov.tres")
+	
 ]
 @onready var uncommon_cards=[
 	load("res://Card Data/John Politiican/creature_related/recruit intern.tres"),
 	load("res://Card Data/John Politiican/buy/buy_glock.tres"),
 	load("res://Card Data/John Politiican/buy/bdozer.tres"),
+	load("res://Card Data/John Politiican/buy/buy crafting ingredients/buy steel sheet.tres"),
+	load("res://Card Data/John Politiican/buy/buy crafting ingredients/buy wielder.tres"),
+	load("res://Card Data/John Politiican/hell/molotov.tres"),
 ]
 @onready var rare_cards=[
-	load("res://Card Data/John Politiican/buy/bsugar.tres")
+	load("res://Card Data/John Politiican/buy/bsugar.tres"),
+	load("res://Card Data/John Politiican/buy/buy crafting ingredients/buy_flamethrower.tres")
 ]
 func _on_button_pressed() -> void:
 	if mtype=="Card Reward":

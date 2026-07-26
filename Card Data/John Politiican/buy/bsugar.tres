@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://b0xxct268v8jh"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_e0x0o"]
+[ext_resource type="Texture2D" uid="uid://bywxnid5wpnfg" path="res://Assets/IMG_2434.png" id="1_l61ug"]
 [ext_resource type="Script" uid="uid://dw72irwsah82e" path="res://Effect Building/Card Tomfoolery/perm_transform_efffect.gd" id="2_l61ug"]
 [ext_resource type="Resource" uid="uid://cadjvsq4swjbc" path="res://Card Data/John Politiican/buy/sugar.tres" id="3_e0x0o"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="4_61cfi"]
@@ -13,6 +14,7 @@ metadata/_custom_type_script = "uid://dw72irwsah82e"
 [resource]
 script = ExtResource("4_61cfi")
 money_cost = 4
+art = ExtResource("1_l61ug")
 card_name = "Buy Sugar"
 card_description = "Buy Sugar"
 effect = SubResource("Resource_yqndm")

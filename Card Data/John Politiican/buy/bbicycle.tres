@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://d23b3lfybm2hs"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_25ata"]
+[ext_resource type="Texture2D" uid="uid://bm24lnet8yssa" path="res://Assets/IMG_2429.png" id="1_nw1mf"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_h2ifx"]
 [ext_resource type="Script" uid="uid://dw72irwsah82e" path="res://Effect Building/Card Tomfoolery/perm_transform_efffect.gd" id="2_yqndm"]
 [ext_resource type="Resource" uid="uid://cavc5ala67ft4" path="res://Card Data/John Politiican/Mounts/Bicycle/Bicycle.tres" id="3_nw1mf"]
@@ -14,6 +15,7 @@ metadata/_custom_type_script = "uid://dw72irwsah82e"
 script = ExtResource("2_h2ifx")
 money_cost = 7
 time_cost = 2
+art = ExtResource("1_nw1mf")
 card_name = "Buy a Bycicle"
 card_description = "Buy the Bycicle Mount"
 effect = SubResource("Resource_yqndm")

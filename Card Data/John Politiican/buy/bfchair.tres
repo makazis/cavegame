@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://bc0gfwxat4dfr"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_lneul"]
+[ext_resource type="Texture2D" uid="uid://nscsqyby5yxl" path="res://Assets/IMG_2431.png" id="1_pwg4o"]
 [ext_resource type="Resource" uid="uid://bj20ligbg1q6y" path="res://Card Data/John Politiican/buy/foldable_chair.tres" id="2_lneul"]
 [ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="3_j44bm"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="4_1eo66"]
@@ -13,6 +14,7 @@ metadata/_custom_type_script = "uid://bc517nkfa4ci3"
 [resource]
 script = ExtResource("4_1eo66")
 money_cost = 2
+art = ExtResource("1_pwg4o")
 card_name = "Buy a Foldable Chair"
 card_description = "Buy a Foldable Chair
 (this one doesn't disappear)"

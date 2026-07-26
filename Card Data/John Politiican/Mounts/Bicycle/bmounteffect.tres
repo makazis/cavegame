@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://4k8fw3sxcw7o"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_024r6"]
+[ext_resource type="Texture2D" uid="uid://bm24lnet8yssa" path="res://Assets/IMG_2429.png" id="1_diphg"]
 [ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_diphg"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_roqjp"]
 
@@ -14,6 +15,7 @@ metadata/_custom_type_script = "uid://udmx0spixt2u"
 script = ExtResource("2_roqjp")
 money_cost = 0
 time_cost = 0
+art = ExtResource("1_diphg")
 card_name = "Bycicle"
 card_description = "gain 7 block"
 effect = SubResource("Resource_diphg")

@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://dutxj2w8pnj6w"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_kmevl"]
+[ext_resource type="Texture2D" uid="uid://bm24lnet8yssa" path="res://Assets/IMG_2429.png" id="1_wkah8"]
 [ext_resource type="Script" uid="uid://br1g8vqd0u61" path="res://Effect Building/Card Tomfoolery/removecardswithnameseffect.gd" id="2_wkah8"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="3_jjfyl"]
 
@@ -11,6 +12,7 @@ metadata/_custom_type_script = "uid://br1g8vqd0u61"
 
 [resource]
 script = ExtResource("3_jjfyl")
+art = ExtResource("1_wkah8")
 card_name = "Dismounting"
 card_description = "Dismounting Bycicle"
 effect = SubResource("Resource_hxd4x")

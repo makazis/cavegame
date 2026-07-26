@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtyjgt8t2pnx"
+path="res://.godot/imported/ScreenRecording_07-26-2026 12-51-53_1.mp3-06f826bc34f377c1b9c386a50de38033.mp3str"
+
+[deps]
+
+source_file="res://Assets/ScreenRecording_07-26-2026 12-51-53_1.mp3"
+dest_files=["res://.godot/imported/ScreenRecording_07-26-2026 12-51-53_1.mp3-06f826bc34f377c1b9c386a50de38033.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

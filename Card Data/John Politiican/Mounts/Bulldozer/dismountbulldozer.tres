@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://7uqdjs0rm1s8"]
 
+[ext_resource type="Texture2D" uid="uid://c8ov1pxpt1vbg" path="res://Assets/IMG_2438.png" id="1_reeui"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_uxnj6"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_q43vs"]
 [ext_resource type="Script" uid="uid://br1g8vqd0u61" path="res://Effect Building/Card Tomfoolery/removecardswithnameseffect.gd" id="2_reeui"]
@@ -11,6 +12,7 @@ metadata/_custom_type_script = "uid://br1g8vqd0u61"
 
 [resource]
 script = ExtResource("2_q43vs")
+art = ExtResource("1_reeui")
 card_name = "Dismounting"
 card_description = "Dismounting Bulldozer"
 effect = SubResource("Resource_reeui")

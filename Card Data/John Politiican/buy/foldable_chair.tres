@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://bj20ligbg1q6y"]
 
+[ext_resource type="Texture2D" uid="uid://nscsqyby5yxl" path="res://Assets/IMG_2431.png" id="1_k26q4"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_tbth2"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_5rmwo"]
 [ext_resource type="Script" uid="uid://bv3xej4wc1ski" path="res://Effect Building/Combat/DrawCardEffect.gd" id="2_wl0xv"]
@@ -23,6 +24,7 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 [resource]
 script = ExtResource("2_5rmwo")
 money_cost = 0
+art = ExtResource("1_k26q4")
 card_name = "Foldable Chair"
 card_description = "Deal 18 damage, draw 1 card"
 effect = SubResource("Resource_f66iv")

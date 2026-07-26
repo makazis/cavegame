@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://cavc5ala67ft4"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_7rlt2"]
+[ext_resource type="Texture2D" uid="uid://bm24lnet8yssa" path="res://Assets/IMG_2429.png" id="1_qm0tu"]
 [ext_resource type="Resource" uid="uid://4k8fw3sxcw7o" path="res://Card Data/John Politiican/Mounts/Bicycle/bmounteffect.tres" id="2_61p7y"]
 [ext_resource type="Script" uid="uid://bc517nkfa4ci3" path="res://Effect Building/Card Tomfoolery/Create_Card.gd" id="2_k88uw"]
 [ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_n7w57"]
@@ -41,6 +42,7 @@ metadata/_custom_type_script = "uid://c5fwf2ionwh12"
 [resource]
 script = ExtResource("3_61p7y")
 money_cost = 0
+art = ExtResource("1_qm0tu")
 card_name = "Bycicle"
 card_description = "Mount. Gain 7 block at the start of each turn. "
 effect = SubResource("Resource_lferd")

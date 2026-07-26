@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="19_ajjgt"]
 [ext_resource type="Texture2D" uid="uid://yewd04an4bcx" path="res://Assets/IMG_2365.webp" id="19_cf78l"]
 [ext_resource type="Texture2D" uid="uid://b5hnow1oi63sd" path="res://Assets/EndTurnButton.png" id="20_5y3d7"]
+[ext_resource type="AudioStream" uid="uid://dtyjgt8t2pnx" path="res://Assets/ScreenRecording_07-26-2026 12-51-53_1.mp3" id="20_axbwd"]
 [ext_resource type="BitMap" uid="uid://7k554wiexp0c" path="res://Assets/EndTurnButtonBitmap.bmp" id="21_i8h5o"]
 [ext_resource type="Texture2D" uid="uid://bon7f2i5e3exw" path="res://Assets/IMG_2337.png" id="22_g2ija"]
 [ext_resource type="Texture2D" uid="uid://bmw8g5ig86jth" path="res://Assets/IMG_2338.png" id="23_skhyk"]
@@ -284,6 +285,10 @@ text = "Select"
 position = Vector2(1283.5, 625)
 scale = Vector2(0.70904034, 0.8475936)
 texture = ExtResource("19_cf78l")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1441270113]
+stream = ExtResource("20_axbwd")
+parameters/looping = true
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

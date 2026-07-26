@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://dju1b6o5u51wx"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_u0mcn"]
+[ext_resource type="Texture2D" uid="uid://blbhp4fledvet" path="res://Assets/IMG_2437.png" id="1_w0gir"]
 [ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_w0gir"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="3_25m4p"]
 
@@ -13,6 +14,7 @@ metadata/_custom_type_script = "uid://udmx0spixt2u"
 script = ExtResource("3_25m4p")
 money_cost = 0
 time_cost = 2
+art = ExtResource("1_w0gir")
 card_name = "Hide Behind Steel"
 card_description = "apply 30 block"
 effect = SubResource("Resource_0tt1l")

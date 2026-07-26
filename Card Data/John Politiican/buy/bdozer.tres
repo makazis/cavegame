@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://diog56y1ltex0"]
 
+[ext_resource type="Texture2D" uid="uid://c8ov1pxpt1vbg" path="res://Assets/IMG_2438.png" id="1_5veob"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_6p5uk"]
 [ext_resource type="Script" uid="uid://dw72irwsah82e" path="res://Effect Building/Card Tomfoolery/perm_transform_efffect.gd" id="2_5veob"]
 [ext_resource type="Resource" uid="uid://beow1nqrtah61" path="res://Card Data/John Politiican/Mounts/Bulldozer/Bulldozer.tres" id="3_6p5uk"]
@@ -14,6 +15,7 @@ metadata/_custom_type_script = "uid://dw72irwsah82e"
 script = ExtResource("4_3xf2q")
 money_cost = 30
 time_cost = 4
+art = ExtResource("1_5veob")
 card_name = "Buy a Bulldozer"
 card_description = "Buy the Bulldozer Mount"
 effect = SubResource("Resource_yqndm")

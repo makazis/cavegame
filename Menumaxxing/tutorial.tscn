@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://udwagd13kfgw"]
 
 [ext_resource type="Texture2D" uid="uid://lof7bpm44qto" path="res://Assets/IMG_2364.png" id="1_nrc4s"]
+[ext_resource type="Script" uid="uid://6y7rpwc0xof6" path="res://Menumaxxing/tutorial.gd" id="1_otden"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="2_ovd16"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ovd16"]
@@ -9,6 +10,7 @@ font_size = 50
 font_color = Color(0.9269548, 0.48662984, 0, 1)
 
 [node name="Tutorial" type="Node2D" unique_id=1519758200]
+script = ExtResource("1_otden")
 
 [node name="Img2364" type="Sprite2D" parent="." unique_id=1461220861]
 position = Vector2(1180, 643)
@@ -19,9 +21,13 @@ offset_left = 224.0
 offset_top = 109.0
 offset_right = 2264.0
 offset_bottom = 1023.0
+text = "John Politician is a simple man with a simple outlook on life - the more, the better. 
+He enjoys the simple things in life, like purchasing all new iPhones at launch, donating to politicians, cutting wages, trading stocks, offering contractless employment, and so on. 
+"
 label_settings = SubResource("LabelSettings_ovd16")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Button" type="Button" parent="." unique_id=902935716]
 offset_left = 2196.0
@@ -33,3 +39,17 @@ theme_override_fonts/font = ExtResource("2_ovd16")
 theme_override_font_sizes/font_size = 80
 text = "Next
 "
+
+[node name="Button2" type="Button" parent="." unique_id=1404136938]
+offset_left = 176.0
+offset_top = 994.0
+offset_right = 368.0
+offset_bottom = 1103.0
+theme_override_colors/font_color = Color(0.8014133, 0.52119726, 0, 1)
+theme_override_fonts/font = ExtResource("2_ovd16")
+theme_override_font_sizes/font_size = 80
+text = "Back
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

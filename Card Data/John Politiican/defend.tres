@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://x08r57e1mwbk"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_ctqgw"]
+[ext_resource type="Texture2D" uid="uid://2evmbm1n00w" path="res://Assets/IMG_2424.png" id="1_udc2l"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_5ucqb"]
 [ext_resource type="Script" uid="uid://udmx0spixt2u" path="res://Effect Building/Combat/Apply Block Static.gd" id="2_hpajf"]
 [ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="4_udc2l"]
@@ -17,6 +18,7 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 [resource]
 script = ExtResource("2_5ucqb")
 money_cost = 0
+art = ExtResource("1_udc2l")
 card_name = "Defend"
 card_description = "Gain 5 block"
 effect = SubResource("Resource_hpajf")

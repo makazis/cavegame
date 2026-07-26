@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://c152kacxc0i10"]
 
+[ext_resource type="Texture2D" uid="uid://ru4mdun3snmf" path="res://Assets/IMG_2427.png" id="1_2xg3p"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_5s3t0"]
 [ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_c84a7"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_weahh"]
@@ -27,6 +28,7 @@ metadata/_custom_type_script = "uid://bl1kp2n20pfe1"
 script = ExtResource("2_weahh")
 money_cost = 2
 time_cost = 0
+art = ExtResource("1_2xg3p")
 card_name = "Buy Hematogens"
 card_description = "buy 3 hematogens, shuffle them into your deck"
 effect = SubResource("Resource_qo0gw")

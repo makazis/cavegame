@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://c85ybiwqjceow"]
 
+[ext_resource type="Texture2D" uid="uid://ru4mdun3snmf" path="res://Assets/IMG_2427.png" id="1_3kjc7"]
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_vd48w"]
 [ext_resource type="Script" uid="uid://0okdd0vdqmcv" path="res://Card Data/Card Tags/EXHAUST.gd" id="2_1y0lx"]
 [ext_resource type="Script" uid="uid://bv3xej4wc1ski" path="res://Effect Building/Combat/DrawCardEffect.gd" id="2_7tu86"]
@@ -24,6 +25,7 @@ metadata/_custom_type_script = "uid://bilwm2ine2q0l"
 script = ExtResource("2_yn1dk")
 money_cost = 0
 time_cost = 0
+art = ExtResource("1_3kjc7")
 card_name = "Hematogen"
 card_description = "gain 1 time
 draw 1 card

@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Gu_Move" format=3 uid="uid://bla0a2vuj4vbi"]
 
 [ext_resource type="Script" uid="uid://bp3qpdpnu4oiy" path="res://Card Data/Card Tags/card_tag.gd" id="1_gy3rv"]
+[ext_resource type="Texture2D" uid="uid://b36rrclib8xuw" path="res://Assets/IMG_2433.png" id="1_s78sj"]
 [ext_resource type="Script" uid="uid://c05j30rnbu6y7" path="res://Effect Building/Combat/Apply Status.gd" id="2_40dqs"]
 [ext_resource type="Script" uid="uid://c7xhxk6bgq13p" path="res://Card Data/Gu/gu_move.gd" id="2_qfuq5"]
 [ext_resource type="Script" uid="uid://co0nojkhbeoum" path="res://Effect Building/Target_Handling/targetCriteria.gd" id="4_s78sj"]
@@ -18,6 +19,7 @@ metadata/_custom_type_script = "uid://co0nojkhbeoum"
 [resource]
 script = ExtResource("2_qfuq5")
 time_cost = 3
+art = ExtResource("1_s78sj")
 card_name = "Firethrower"
 card_description = "apply 40 burning"
 effect = SubResource("Resource_40dqs")

@@ -54,7 +54,9 @@ text = "You arrive at a campfire.
 
              You feel the warmth, and it's so pleasant.
 
-       You wonder if you can "
+       You wonder if you can use the heat to
+
+  Produce some slightly better cards"
 label_settings = SubResource("LabelSettings_g4v7s")
 
 [node name="Label2" type="Label" parent="ColorRect" unique_id=2009521205]

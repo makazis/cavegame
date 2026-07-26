@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://d0ommctesty06"]
 
-[ext_resource type="Texture2D" uid="uid://cc7vfbmny1fky" path="res://Assets/Icons/SwordIcon.png" id="1_k5rha"]
 [ext_resource type="Script" uid="uid://8wb2hnsqyq05" path="res://Creature Data/Other/status_effect.gd" id="1_w3rgf"]
+[ext_resource type="Texture2D" uid="uid://bremexj2r3iq4" path="res://Assets/IMG_2347.png" id="2_0x71u"]
+[ext_resource type="Texture2D" uid="uid://c571470oufef8" path="res://Assets/IMG_2384.png" id="2_8vm10"]
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="2_w3rgf"]
-[ext_resource type="Texture2D" uid="uid://b3j11g63dl0i1" path="res://Assets/Icons/ShieldIcon.png" id="3_8vm10"]
-[ext_resource type="Texture2D" uid="uid://dkorpchsjpt0a" path="res://Assets/Icons/CurseIcon.png" id="4_0x71u"]
+[ext_resource type="Texture2D" uid="uid://7qfkhsu1d45u" path="res://Assets/IMG_2383.png" id="3_0x71u"]
+[ext_resource type="Texture2D" uid="uid://iiu0hd2ol35a" path="res://Assets/IMG_2348.png" id="5_8vm10"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font = ExtResource("2_w3rgf")
@@ -29,24 +30,37 @@ position = Vector2(15, 25)
 rotation = 0.3654006
 scale = Vector2(0.08920445, 0.047435056)
 
-[node name="ShieldIcon" type="Sprite2D" parent="Icon" unique_id=1291684375]
+[node name="ShieldIcon" type="Sprite2D" parent="Icon" unique_id=1643762030]
 visible = false
-position = Vector2(144.21841, -113.6355)
+modulate = Color(0.77, 0.55953336, 0.1386, 1)
+position = Vector2(60.803833, -80.92255)
 rotation = -0.62367177
-scale = Vector2(1.381418, 2.1519644)
+scale = Vector2(0.44173807, 0.6881371)
 skew = 0.42297053
-texture = ExtResource("3_8vm10")
+texture = ExtResource("2_0x71u")
+
+[node name="ShackleIcon" type="Sprite2D" parent="Icon" unique_id=223238245]
+visible = false
+position = Vector2(111.800476, 77.56445)
+rotation = -0.62367177
+scale = Vector2(0.32864586, 0.5119626)
+skew = 0.42297053
+texture = ExtResource("2_8vm10")
+
+[node name="BurnIcon" type="Sprite2D" parent="Icon" unique_id=659762800]
+visible = false
+position = Vector2(120.7238, 3.4297028)
+rotation = -0.62367177
+scale = Vector2(0.3861256, 0.60150415)
+skew = 0.42297053
+texture = ExtResource("3_0x71u")
 
 [node name="SwordIcon" type="Sprite2D" parent="Icon" unique_id=2075088410]
 visible = false
-texture = ExtResource("1_k5rha")
-
-[node name="CurseIcon" type="Sprite2D" parent="Icon" unique_id=29938115]
-position = Vector2(88.186676, -62.036682)
-rotation = -0.62367177
-scale = Vector2(1.1464596, 1.8458929)
-skew = 0.42297065
-texture = ExtResource("4_0x71u")
+position = Vector2(91.772156, -20.88379)
+rotation = -0.36952853
+scale = Vector2(0.7680663, 0.7680663)
+texture = ExtResource("5_8vm10")
 
 [node name="Label" type="Label" parent="." unique_id=1808601113]
 layout_mode = 0

@@ -6,6 +6,8 @@ var time=4
 var max_time=4
 var turn=0
 var max_dig=40
+var root=null
+
 var dig=40:
 	set(value):
 		dig=value

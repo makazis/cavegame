@@ -4,7 +4,8 @@
 [ext_resource type="FontFile" uid="uid://ds1saal6ugufw" path="res://Assets/Excalifont-Regular.woff2" id="1_d1j6d"]
 [ext_resource type="Texture2D" uid="uid://iiu0hd2ol35a" path="res://Assets/IMG_2348.png" id="2_35lex"]
 [ext_resource type="Texture2D" uid="uid://bremexj2r3iq4" path="res://Assets/IMG_2347.png" id="3_35lex"]
-[ext_resource type="Texture2D" uid="uid://dkorpchsjpt0a" path="res://Assets/Icons/CurseIcon.png" id="4_35lex"]
+[ext_resource type="Texture2D" uid="uid://cr0ol78hfp0ds" path="res://Assets/IMG_2417.png" id="5_4886w"]
+[ext_resource type="Texture2D" uid="uid://bn0iv7dnv5rso" path="res://Assets/IMG_2416.png" id="6_8unyh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ub26"]
 font = ExtResource("1_d1j6d")
@@ -42,6 +43,14 @@ label_settings = SubResource("LabelSettings_5ub26")
 visible = false
 
 [node name="CurseIcon" type="Sprite2D" parent="NegStatus" unique_id=797306503]
-position = Vector2(22.000002, 21)
-scale = Vector2(0.09623016, 0.08975904)
-texture = ExtResource("4_35lex")
+position = Vector2(28, 34.666668)
+scale = Vector2(0.033050343, 0.030827828)
+texture = ExtResource("5_4886w")
+
+[node name="Buff" type="Node2D" parent="." unique_id=648630868]
+visible = false
+
+[node name="Img2416" type="Sprite2D" parent="Buff" unique_id=459600217]
+position = Vector2(26.666662, 36)
+scale = Vector2(0.038968824, 0.038968824)
+texture = ExtResource("6_8unyh")

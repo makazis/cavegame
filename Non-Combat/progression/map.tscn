@@ -1,18 +1,14 @@
 [gd_scene format=3 uid="uid://dc58mwayvn1wr"]
 
 [ext_resource type="Script" uid="uid://bky3ekjj1msa8" path="res://Non-Combat/progression/map.gd" id="1_ihwfi"]
+[ext_resource type="Texture2D" uid="uid://kmaq2dcvgwfl" path="res://Assets/IMG_2408.png" id="2_3xr3k"]
+[ext_resource type="Texture2D" uid="uid://3j2ss7xcf8tk" path="res://Assets/IMG_2407.png" id="3_syayg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(2558, 1258)
 
 [node name="Map" type="Node2D" unique_id=989293573]
 script = ExtResource("1_ihwfi")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=639720486]
-z_index = -100
-offset_right = 2560.0
-offset_bottom = 1260.0
-color = Color(1, 0.8627451, 0.6117647, 1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=552724803]
 priority = 1
@@ -22,6 +18,37 @@ position = Vector2(1280, 630)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="map" type="Node2D" parent="." unique_id=1673681967]
+
+[node name="Img2408" type="Sprite2D" parent="map" unique_id=40605167]
+z_index = -300
+position = Vector2(1296, 9420)
+scale = Vector2(1.4354485, 1.4354486)
+texture = ExtResource("2_3xr3k")
+
+[node name="Img2410" type="Sprite2D" parent="map" unique_id=1337445074]
+z_index = -300
+position = Vector2(1296.0001, 13637.999)
+scale = Vector2(1.4354485, 1.4354486)
+texture = ExtResource("2_3xr3k")
+
+[node name="Img2409" type="Sprite2D" parent="map" unique_id=1547970875]
+z_index = -300
+position = Vector2(1296, 5201)
+scale = Vector2(1.4354485, 1.4354486)
+texture = ExtResource("2_3xr3k")
+
+[node name="Img2407" type="Sprite2D" parent="map" unique_id=1774385325]
+z_index = -300
+position = Vector2(1303, 971)
+scale = Vector2(1.4431072, 1.4431071)
+texture = ExtResource("3_syayg")
+
+[node name="Marker2D" type="Marker2D" parent="map" unique_id=1825262640]
+modulate = Color(0.08627451, 0.05882353, 0.03137255, 1)
+position = Vector2(1280, 400)
+
+[node name="Marker2D2" type="Marker2D" parent="map" unique_id=308252845]
+position = Vector2(722, 15747)
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

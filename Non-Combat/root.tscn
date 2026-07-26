@@ -15,16 +15,18 @@
 [ext_resource type="Script" uid="uid://lhb5ry3o8icy" path="res://addons/simple_cards/deck/card_deck.gd" id="12_5l04m"]
 [ext_resource type="PackedScene" uid="uid://bbtuayi2137ai" path="res://Non-Combat/card rewards/card_reward_screen.tscn" id="13_7olg0"]
 [ext_resource type="PackedScene" uid="uid://btdkswm55gbmu" path="res://Shitposting/MusicPlayerTrustMeBro.tscn" id="16_38q5j"]
+[ext_resource type="AudioStream" uid="uid://cfapsncjloaq4" path="res://Assets/Billy Joel - We Didnt Start the Fire (Instrumental).mp3" id="16_iwoyh"]
+[ext_resource type="PackedScene" uid="uid://c5rn5w8faxyxm" path="res://Non-Combat/progression/OtherEncounters/campfire.tscn" id="17_iwoyh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font = ExtResource("2_hjd13")
 font_size = 32
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb442"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwoyh"]
 resource_local_to_scene = true
 size = Vector2(1232, 1241)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_38q5j"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l04m"]
 resource_local_to_scene = true
 size = Vector2(1232, 956)
 
@@ -78,10 +80,10 @@ offset_right = 2304.0
 offset_bottom = 1446.0
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea4" parent_id_path=PackedInt32Array(1328499140, 1743876184) index="0" unique_id=1810447271]
-shape = SubResource("RectangleShape2D_mb442")
+shape = SubResource("RectangleShape2D_iwoyh")
 
 [node name="CollisionShape2D" parent="Screens/Root/DragArea3" parent_id_path=PackedInt32Array(1328499140, 220950517) index="0" unique_id=30001419]
-shape = SubResource("RectangleShape2D_38q5j")
+shape = SubResource("RectangleShape2D_5l04m")
 
 [node name="PostCombatRewards" parent="Screens" unique_id=130116637 instance=ExtResource("10_5htkc")]
 position = Vector2(3840, -630)
@@ -102,6 +104,13 @@ starting_pile = NodePath("../Screens/Root/Deck")
 metadata/_custom_type_script = "uid://bisyk4bowdvsf"
 
 [node name="MusicPlayerTrustMeBro" parent="." unique_id=2054029648 instance=ExtResource("16_38q5j")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=240867382]
+stream = ExtResource("16_iwoyh")
+autoplay = true
+
+[node name="Campfire" parent="." unique_id=2128875683 instance=ExtResource("17_iwoyh")]
+position = Vector2(6400, -630)
 
 [editable path="Screens/Root"]
 [editable path="Screens/Map"]

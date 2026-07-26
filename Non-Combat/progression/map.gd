@@ -6,13 +6,14 @@ extends Node2D
 
 var encounters=[]
 func _ready() -> void:
+	
 	var last_enemy_count=1
 	for i in range(50):
 		encounters.append([])
 		if i==0:
 			for ii in range(1):
-				var x=2560*((ii+1.)/2)+randi_range(-60,60)
-				var y=400+randi_range(-60,60)
+				var x=1280
+				var y=400
 				encounters[-1].append([create_encounter_at(Vector2(x,y)),[]])
 				encounters[-1][-1][0].setup("Enemy")
 				encounters[-1][-1][0].unlocked=true
@@ -97,7 +98,7 @@ func _ready() -> void:
 				
 					
 			last_enemy_count=enemy_count
-
+	$map.position.y=1149
 func create_encounter_at(pos:Vector2):
 	var temp_enemy=encounter.instantiate()
 	temp_enemy.global_position=pos
@@ -117,7 +118,7 @@ func _process(delta: float) -> void:
 	var mouse_rel=mouse_pos-lmp
 	if dragging_map and abs(mouse_pos[0])<1280 and abs(mouse_pos[1])<630:
 		$map.position.y+=mouse_rel.y
-	
+		$map.position.y=min(1149.0,max(-(15747.0-1260.0),$map.position.y))
 		
 	lmp=mouse_pos
 

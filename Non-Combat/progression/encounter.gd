@@ -41,24 +41,40 @@ func _process(delta: float) -> void:
 var enemy_costs={
 	"Bigfoot":4,
 	"Chupacabra":3,
+	"Mothman":7,
+	"Mongolian Death Worm":6,
+	"Lesser Angel":10,
+	"Greater Angel":28
 }
 var enemies=enemy_costs.keys()
 func _on_button_pressed() -> void:
 	if unlocked:
-		CombatData.dig=40+pow(1+depth/30.,6)
-		CombatData.max_dig=CombatData.dig
-		get_parent().get_parent().dragging_map=false
-		generate_rewards()
-		var enemies_you_have_to_fight=[]
-		var enemy_pool=4+depth/2
-		for i in range(100): #rolls
-			var random_monster=enemies.pick_random()
-			if enemy_costs[random_monster]<=enemy_pool:
-				enemy_pool-=enemy_costs[random_monster]
-				enemies_you_have_to_fight.append(random_monster)
-		get_parent().get_parent().get_parent().get_parent().show_screen("Combat",{"Enemies":enemies_you_have_to_fight})
-		get_parent().get_parent().get_parent().get_parent().held_data=rewards
-
+		if type=="Enemy" or type=="Elite":
+			CombatData.dig=40+pow(1+depth/30.,6)
+			CombatData.max_dig=CombatData.dig
+			get_parent().get_parent().dragging_map=false
+			generate_rewards()
+			var enemies_you_have_to_fight=[]
+			var enemy_pool=4+depth/2
+			if type=="Elite":
+				enemy_pool*=1.5+randf()/2
+				enemy_pool=int(enemy_pool)
+			for i in range(100): #rolls
+				var random_monster=enemies.pick_random()
+				if enemy_costs[random_monster]<=enemy_pool:
+					enemy_pool-=enemy_costs[random_monster]
+					enemies_you_have_to_fight.append(random_monster)
+			get_parent().get_parent().get_parent().get_parent().show_screen("Combat",{"Enemies":enemies_you_have_to_fight})
+			get_parent().get_parent().get_parent().get_parent().held_data=rewards
+		elif type=="Rest":
+			CombatData.root.show_screen("Campfire")
+		elif type=="Random":
+			CombatData.root.show_screen("Encounter")
+		elif type=="Resource":
+			CombatData.root.show_screen("Encounter")
+		elif type=="Random":
+			CombatData.root.show_screen("Encounter")
+		
 		for i in unlocks:
 			i.unlocked=true
 		for i in siblings:

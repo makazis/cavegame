@@ -9,7 +9,8 @@ func deal_damage(attacker:Creature,defender:Creature,damage:int,times:int=1):
 	if defender.block<0:
 		defender.hp+=defender.block
 		defender.block=0
-
+	if Options.screen_shake_on_hitting:
+		CombatData.I_NEED_MORE_SCREEN_SHAKE.emit(total_damage)
 func apply_block(target:Creature,source:Creature,block:int,times:int=1):
 	var gained_block=block
 	if "Dexterity" in source.statuses:

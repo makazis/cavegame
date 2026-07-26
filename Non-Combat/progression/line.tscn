@@ -3,4 +3,7 @@
 [node name="Node2D" type="Line2D" unique_id=1588652219]
 z_index = -99
 points = PackedVector2Array(0, 0, 100, 0)
-default_color = Color(0.72, 0.62172, 0.4392, 1)
+width = 40.0
+default_color = Color(0.08627451, 0.05882353, 0.03137255, 1)
+begin_cap_mode = 2
+end_cap_mode = 2

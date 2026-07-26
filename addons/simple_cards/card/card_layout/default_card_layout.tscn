@@ -121,3 +121,5 @@ offset_bottom = -516.0285
 label_settings = SubResource("LabelSettings_ngurv")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport/DefaultCardSprite" unique_id=304383900]

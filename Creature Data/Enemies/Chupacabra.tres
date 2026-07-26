@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b1220yr12wl0u" path="res://Creature Data/Attack_Pattern/EnemyAttackMove.gd" id="1_7pe36"]
 [ext_resource type="Script" uid="uid://cxk8nxq7mevbi" path="res://Creature Data/Attack_Pattern/new_script.gd" id="2_055il"]
 [ext_resource type="Script" uid="uid://crwrqd6c7y8wu" path="res://Creature Data/Attack_Pattern/Attack_Pattern.gd" id="3_3f0rl"]
-[ext_resource type="Texture2D" uid="uid://dmgrgeis470j7" path="res://Creature Data/Images/chupacabra.png" id="4_ayucu"]
+[ext_resource type="Texture2D" uid="uid://dgvkep44w4op2" path="res://Creature Data/Enemies/chupacabra.png" id="4_7pe36"]
 
 [sub_resource type="Resource" id="Resource_ayucu"]
 script = ExtResource("2_055il")
@@ -52,7 +52,7 @@ metadata/_custom_type_script = "uid://crwrqd6c7y8wu"
 script = ExtResource("1_1fqgr")
 name = "Chupacabra"
 hp = 35
-image = ExtResource("4_ayucu")
+image = ExtResource("4_7pe36")
 team = "Enemy"
 attack_pattern = SubResource("Resource_1fqgr")
 metadata/_custom_type_script = "uid://cs1e2lwpafbvf"

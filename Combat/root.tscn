@@ -178,7 +178,6 @@ wait_time = 0.2
 one_shot = true
 
 [node name="DragArea4" type="Area2D" parent="." unique_id=1743876184]
-visible = false
 position = Vector2(1880, 602)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea4" unique_id=1810447271]
@@ -186,7 +185,6 @@ position = Vector2(44, -171)
 shape = SubResource("RectangleShape2D_jsov7")
 
 [node name="DragArea3" type="Area2D" parent="." unique_id=220950517]
-visible = false
 position = Vector2(1880, 602)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea3" unique_id=30001419]
@@ -194,7 +192,6 @@ position = Vector2(44, -215)
 shape = SubResource("RectangleShape2D_cgq65")
 
 [node name="DragArea2" type="Area2D" parent="." unique_id=387482346]
-visible = false
 position = Vector2(592, 602)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea2" unique_id=1686199303]
@@ -202,7 +199,6 @@ position = Vector2(44, 28.5)
 shape = SubResource("RectangleShape2D_axbwd")
 
 [node name="DragArea" type="Area2D" parent="." unique_id=1126227568]
-visible = false
 position = Vector2(592, 602)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea" unique_id=1546847182]

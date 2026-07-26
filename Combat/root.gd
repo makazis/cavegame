@@ -8,6 +8,10 @@ var creature_load_reference={
 	"Spectral Dog":preload("res://Creature Data/Enemies/Ethereal Dog.tres"),
 	"Bigfoot":preload("res://Creature Data/Enemies/bigfootprobably.tres"),
 	"Chupacabra":preload("res://Creature Data/Enemies/Chupacabra.tres"),
+	"Mothman":preload("res://Creature Data/Enemies/mthman.tres"),
+	"Mongolian Death Worm":preload("res://Creature Data/Enemies/mgdw.tres"),
+	"Lesser Angel":preload("res://Creature Data/Enemies/lesser_angel.tres"),
+	"Greater Angel":preload("res://Creature Data/Enemies/greater_angel.tres")
 }
 func _ready() -> void:
 	CombatData.root_visual_update.connect(visual_update)

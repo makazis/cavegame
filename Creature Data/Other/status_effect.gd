@@ -23,6 +23,10 @@ func setup(status,entity):
 		$Icon/ShieldIcon.visible=true
 	elif status=="Curse":
 		$Icon/CurseIcon.visible=true
+	elif status=="Shackle":
+		$Icon/ShackleIcon.visible=true
+	elif status=="Burning":
+		$Icon/BurnIcon.visible=true
 	
 	update(entity)
 func update(entity):
